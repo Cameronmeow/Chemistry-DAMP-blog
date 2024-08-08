@@ -1,0 +1,38 @@
+.curved-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px #1e04e166;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .curved-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .curved-card-image-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .curved-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .curved-card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px;
+  }
+  

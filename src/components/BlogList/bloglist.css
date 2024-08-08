@@ -1,0 +1,72 @@
+/* BlogList.css */
+
+/* Container for the blog list */
+.blog-list {
+  padding: 40px 20px; /* Increased padding for more spacing */
+   max-width: 800px; /*Constrain the width for better readability */
+  margin: 0 auto; /*Center the container*/
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Title for the blog list section */
+.blog-list-title {
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 30px; /* More space below title */
+  color: #333; /* Darker color for contrast */
+  text-align: center; /* Center align the title */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+/* Each blog summary container */
+.blog-summary {
+  margin-bottom: 30px; /* More space between blog summaries */
+  padding: 20px; /* Increased padding for more space inside */
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 12px; /* Increased border-radius for a more rounded look */
+  background-color: #ffffff; /* White background for card contrast */
+  box-shadow: 0 4px 12px #1e04e166; /* Larger shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the blog summary */
+.blog-summary:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Title of each blog post */
+.blog-title {
+  font-size: 1.8rem; /* Larger title font size */
+  margin: 0;
+  color: #333; /* Darker color for better readability */
+}
+
+/* Excerpt of each blog post */
+.blog-excerpt {
+  font-size: 1.1rem; /* Slightly larger text */
+  color: #666; /* Softer color for less emphasis */
+  margin-top: 10px; /* Space above excerpt */
+  line-height: 1.6; /* Better line spacing */
+}
+
+/* Read more link styling */
+.read-more {
+  display: inline-block; /* Display as a block for better click area */
+  margin-top: 15px; /* Space above link */
+  padding: 10px 15px; /* Padding for button-like appearance */
+  background-color: #1e04e1; /* Blue background */
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for read more link */
+.read-more:hover {
+  background-color: #5f49ff; /* Darker blue on hover */
+
+}

@@ -1,0 +1,56 @@
+/* Card.css */
+
+.cardB {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    
+    overflow: hidden;
+    box-shadow: 0 4px 8px #1e04e166;
+    max-width: 300px;
+    max-height: 400px;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+    animation: fadeIn 1s ease; /* Animation for fade-in effect */
+    transform: scale(1);
+  }
+  
+  /* Scale the card slightly on hover */
+  .cardB:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardB-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .cardB-content {
+    padding: 15px;
+  }
+  
+  .cardB-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .cardB-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

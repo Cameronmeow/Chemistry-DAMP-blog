@@ -1,0 +1,45 @@
+.contactdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contact-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    position: relative;
+    animation: fadeInDown 1s ease forwards;
+  }
+  .contact-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #666;
+    text-align: center;
+    position: relative;
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: 0.3s;
+  }
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* @media (max-width: 768px) {
+    .contactrow{
+      flex-direction: column;
+    }
+  } */

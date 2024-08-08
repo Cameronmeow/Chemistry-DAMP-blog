@@ -1,0 +1,41 @@
+.appContainer{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px;
+}
+.appblogs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.approw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    bottom: 10px;
+}
+.appside{
+    
+    top: 20px; 
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; */
+    position: sticky;
+
+}
+.side{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .approw{
+      flex-direction: column;
+    }
+  }
