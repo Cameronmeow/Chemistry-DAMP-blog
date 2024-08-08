@@ -36,6 +36,9 @@ const Navbar = () => {
             <a href="/faq" className="navbar-link">FAQS</a>
           </li>
           <li className="navbar-item">
+            <a href="/misc" className="navbar-link">Miscellaneous Blogs</a>
+          </li>
+          <li className="navbar-item">
             <a href="/query" className="navbar-link">Queries</a>
           </li>
           <li className="navbar-item">

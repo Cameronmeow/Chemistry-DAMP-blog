@@ -7,7 +7,10 @@ import BlogDetail from "./components/BlogDetails/BlogDetail";
 import blogs from "./Pages/blogData";
 import FAQ from "./Pages/FAQ";
 import QueryForm from "./Pages/Query";
-
+import MiscBlogs from "./Pages/MiscBlogs";
+import Testimonials from "./components/SemexBlogs/Testimonials";
+import Intern from "./components/Intern Blogs/intern";
+// import Testimonials from "./components/Testimonials/Testimonials";
 function App() {
   const [blogList] = useState(blogs);
 
@@ -24,6 +27,10 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:id" element={<BlogDetail blogs={blogList} />} />
           <Route path="/query" element={<QueryForm/>}/>
+          <Route path="/misc" element={<MiscBlogs/>}/>
+          <Route path="/testimonials" element={<Testimonials/>}/>
+          <Route path="/intern" element={<Intern/>}/>
+
           {/* <Route path="/services" element={<Services/>} />
           <Route path="/about" element={<About/>}/>  */}
         </Routes>
