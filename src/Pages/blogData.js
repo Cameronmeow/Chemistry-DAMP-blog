@@ -19,6 +19,7 @@ const blogs = [
       excerpt: 'Explore the new features introduced in ES6.',
       courseContent: 'Course content involves Basics of Aerodynamics using simple equations and a lot of illustrations, Different types of aircraft and other aerodynamic machines, their basic structure and working and their current real-world scenario, case studies related to aircraft accidents, aircraft Operations and their working atmosphere, and many more interesting topics, covering some of their basic knowledge.',
       difficulty: 4,
+      Department: "chemesitry",
       Instructor: 'Prof. Chirag Sharma',
       Semester: "Autumn 19",
       TeachingStyle: "Teaching style of the professor is very good. The class usually runs in Inverse Classroom mode, in which students are provided with the class content before the class, they have to study that content, and there are video representations and fruitful discussions in the class hours.",

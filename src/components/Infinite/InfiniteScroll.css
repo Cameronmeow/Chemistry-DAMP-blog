@@ -1,0 +1,27 @@
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #1e04e1;
+    padding: 20px 0;
+    white-space: nowrap;
+  }
+  
+  .scroll-content {
+    display: inline-flex;
+  }
+  
+  .scroll-item {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 0 10px;
+    background: whitesmoke;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: larger;
+    font-style: italic;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  

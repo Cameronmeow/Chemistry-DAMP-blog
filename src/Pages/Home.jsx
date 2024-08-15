@@ -5,6 +5,7 @@ import Header from "../components/header/header";
 import Blog from "../components/blog/blog";
 import SideBar from "../components/sidebar/sidebar";
 import Announcements from "../components/Annoucements/Announcements";
+import InfiniteScroll from "../components/Infinite/Infinite";
 import pic1 from "./pic1.jpg";
 import pic2 from "./pic2.jpg";
 import pic3 from "./pic3.jpg";
@@ -58,6 +59,7 @@ function Home() {
     <>
       <Navbar />
       <Header />
+      <InfiniteScroll />
       <div className="appContainer">
         <div className="appblogs">
           <div className="approw">
