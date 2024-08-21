@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css'; // Import your CSS file for styling
-import bg from "./bg2.jpg";
+import bg from "./bg3.jpg";
 
 const Header = () => {
     const bannerStyle = {
@@ -9,7 +9,7 @@ const Header = () => {
         
         backgroundPosition: 'center',
         color: 'white',
-        height: '400px',
+        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -19,9 +19,8 @@ const Header = () => {
   return (
     <header className="banner" style={bannerStyle}>
       <div className="banner-content">
-        <h1 className="banner-title">Welcome to Our Website</h1>
-        <p className="banner-subtitle">We bring you the best experiences</p>
-        <button className="banner-cta">Get Started</button>
+        <h1 className="banner-title">Chemistry DAMP Blogs</h1>
+        <p className="banner-subtitle">- By Chemistry Family</p>
       </div>
     </header>
   );

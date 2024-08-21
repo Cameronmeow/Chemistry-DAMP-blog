@@ -10,6 +10,9 @@
     flex-direction: column;
     justify-content: center;
 }
+.appTitle{
+    margin: 20px;
+}
 .approw{
     display: flex;
     align-items: center;

@@ -1,0 +1,75 @@
+.carousel {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1f7f5; /* Optional: Background color during image transition */
+}
+.carousel-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+.carousel-body-text {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1E0342;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 1;
+  max-width: 80%;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 500px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  display: flex;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel-indicator {
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  /* border-radius: 50%; */
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+  background-color: #1e0342;
+}

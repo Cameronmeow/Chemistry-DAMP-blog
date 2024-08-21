@@ -1,53 +1,88 @@
 // Navbar.jsx
-import React, { useState } from 'react';
-import './navbar.css'; // Importing CSS file for styling
-import logo from "./logo_blue.svg";
-
+import React, { useState } from "react";
+import "./navbar.css"; // Importing CSS file for styling
+import logo from "./logo_blueblack.svg";
+// import LoginSignUp from "../LoginSignUP/LoginSignupForm.jsx"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [Login,setLogin] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  function handleChange(){
+    setLogin(!Login);
+  }
   return (
+    <>
     <nav className="navbarB">
       <div className="navbar-container">
         <a href="/" className="navbar-logo">
           <img
             src={logo}
-            style={{ height: "65px", padding: "0" }} // Adjusted height to match navbar height
+            style={{ height: "85px", padding: "0" }} // Adjusted height to match navbar height
             alt="logo"
           />
         </a>
-        <div className={`navbar-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        <div
+          className={`navbar-toggle ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
           <span className="navbar-toggle-icon"></span>
           <span className="navbar-toggle-icon"></span>
           <span className="navbar-toggle-icon"></span>
         </div>
-        <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+
+        <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="navbar-item">
-            <a href="/" className="navbar-link">Home</a>
+            <a href="/" className="navbar-link">
+              Home
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="/blogs" className="navbar-link">Blogs</a>
+            <a href="/courses" className="navbar-link">
+              Course Reviews
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="/faq" className="navbar-link">FAQS</a>
+            <a href="/resources" className="navbar-link">
+              Resources
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="/misc" className="navbar-link">Miscellaneous Blogs</a>
+            <a href="/faq" className="navbar-link">
+              FAQS
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="/query" className="navbar-link">Queries</a>
+            <a href="/misc" className="navbar-link">
+              Miscellaneous Blogs
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="/team" className="navbar-link">Team</a>
+            <a href="/contact" className="navbar-link">
+              Queries
+            </a>
           </li>
-          
+          <li className="navbar-item">
+            <a href="/team" className="navbar-link">
+              Team
+            </a>
+          </li>
+
+          {/* <li className="navbar-item navButton">
+            <a href="/team" className="navbar-link">Login</a>
+          </li>
+           */}
         </ul>
+        <div>
+          <button className="navButton btn" onClick={handleChange}>Login</button>
+          <button className="navButton-sign btn">Sign Up</button>
+        </div>
       </div>
     </nav>
+
+    {/* {Login && <LoginSignUp/>} */}
+    </>
   );
 };
 

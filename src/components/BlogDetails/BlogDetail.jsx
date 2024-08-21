@@ -3,11 +3,23 @@ import { useParams } from 'react-router-dom';
 import './BlogDetail.css';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
+import Comments from '../Comments/Comments';
 import pic1 from "./pic1.jpg";
 import pic2 from "./pic2.jpg";
 import pic3 from "./pic3.jpg";
 
 const BlogDetail = ({ blogs }) => {
+
+  // const [comments, setComments] = useState([
+  //   { user: 'Jane Doe', text: 'Great blog!' },
+  //   { user: 'John Smith', text: 'Very informative, thanks!' }
+  // ]);
+
+  const addComment = (text) => {
+    const newComment = { user: 'Current User', text };
+    setComments([...comments, newComment]);
+  };
+
   const { id } = useParams();
   const blog = blogs.find((blog) => blog.id === parseInt(id));
   const images = [pic1, pic2, pic3];
@@ -37,10 +49,12 @@ const BlogDetail = ({ blogs }) => {
           <p className="blog-detail-content">{blog.Semester}</p>
           <h2>Teaching Style</h2>
           <p className="blog-detail-content">{blog.TeachingStyle}</p>
+      <Comments />
         </>
       ) : (
         <p>Blog not found</p>
       )}
+
     </div>
     <Footer/>
     </>

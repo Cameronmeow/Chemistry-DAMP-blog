@@ -1,5 +1,5 @@
 import "./footer.css";
-import logo from "./logo_blue.svg";
+import logo from "./logo_basic.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faHeart } from "@fortawesome/free-regular-svg-icons";
@@ -10,7 +10,7 @@ function Footer() {
   return (
     <>
       {/* <Announcements/> */}
-      <div className="footersmp" style={{backgroundColor:"#1e04e1"}} >
+      <div className="footersmp" style={{backgroundColor:"#0E46A3"}} >
         <div class="container" >
           <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top">
             <div class="col mb-3 text-center footerContainer">
@@ -47,29 +47,25 @@ function Footer() {
                 </li>
                 <li class="nav-item mb-2">
                   <a href="#" class="nav-link p-0 ">
-                    Incoming Students
+                    FAQs
                   </a>
                 </li>
                 <li class="nav-item mb-2">
                   <a href="#" class="nav-link p-0 ">
-                    Academics
+                    Miscellaneous
                   </a>
                 </li>
                 <li class="nav-item mb-2">
                   <a href="#" class="nav-link p-0 ">
-                    Life at IITB
+                    Queries
                   </a>
                 </li>
                 <li class="nav-item mb-2">
                   <a href="#" class="nav-link p-0 ">
-                    Extracurriculars
+                    Team
                   </a>
                 </li>
-                <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0 ">
-                    About Us
-                  </a>
-                </li>
+                
               </ul>
             </div>
 
