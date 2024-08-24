@@ -44,6 +44,11 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-item">
+            <a href="/gallery" className="navbar-link">
+              Gallery
+            </a>
+          </li>
+          <li className="navbar-item">
             <a href="/resources" className="navbar-link">
               Resources
             </a>

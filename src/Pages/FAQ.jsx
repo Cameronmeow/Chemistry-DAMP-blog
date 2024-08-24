@@ -69,7 +69,7 @@ function FAQ() {
         <div className="faq-questions">
           {faqData.map((faq, index) => (
             <div key={index} className="faq-item" onClick={() => handleToggle(index)}>
-              <div className="faq-question" style={{fontWeight: '600', fontStyle:'italic'}}>
+              <div className="faq-question" style={{fontWeight: '600'}}>
                 
                 {faq.question}
                 <span className={`arrow ${activeIndex === index ? 'down' : 'right'}`}>&#x25B6;</span>

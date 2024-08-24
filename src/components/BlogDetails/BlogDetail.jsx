@@ -49,6 +49,14 @@ const BlogDetail = ({ blogs }) => {
           <p className="blog-detail-content">{blog.Semester}</p>
           <h2>Teaching Style</h2>
           <p className="blog-detail-content">{blog.TeachingStyle}</p>
+          <h2>Time Commitment Required</h2>
+          <p className="blog-detail-content">{blog.TimeCommitmentRequired}</p>
+          <h2>Grading Policy and Statistics</h2>
+          <p className="blog-detail-content">{blog.GradingPolicyStatistics}</p>
+          <h2>Attendance Policy</h2>
+          <p className="blog-detail-content">{blog.AttendancePolicy}</p>
+          <h2>Evaluation Scheme</h2>
+          <p className="blog-detail-content">{blog.EvaluationScheme}</p>
       <Comments />
         </>
       ) : (

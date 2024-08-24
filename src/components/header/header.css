@@ -1,14 +1,14 @@
 
 .banner-content {
   backdrop-filter: blur(1px);
-  background-color: rgba(255, 255, 255, 0.511);
+  background-color: #0e47a375;
   width: 100%;
  
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
   padding: 10px;
-  color: black;
+  color: white;
 }
 
 .banner-title {

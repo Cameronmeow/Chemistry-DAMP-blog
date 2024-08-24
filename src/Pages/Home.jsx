@@ -63,8 +63,8 @@ function Home() {
   return (
     <>
       <Navbar />
-      <Header />
       <Carousel interval={3000} />
+      <Header />
        
       {/* <LoginSignupForm/> */}
       <InfiniteScroll />

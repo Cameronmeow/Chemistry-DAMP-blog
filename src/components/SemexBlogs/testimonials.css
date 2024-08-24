@@ -1,69 +1,66 @@
-/* testimonials.css */
-
 .testimonials-container {
-    padding: 40px 20px;
-    max-width: 1200px;
-    
-    margin: 0 auto;
-    background-color: #f8f9fa;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .testimonials-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .testimonials-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .testimonial-card {
-    background-color: #fff;
-    border-radius: 12px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    gap: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 90%;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  .testimonial-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  .testimonial-name {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .testimonial-experience {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-  
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.testimonials-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.testimonials-intro, .testimonials-description {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonials-subtitle {
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.testimonials-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  max-width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonial-experience {
+  font-size: 1em;
+  color: #666;
+  font-style: italic;
+}

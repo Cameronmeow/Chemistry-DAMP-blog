@@ -1,0 +1,139 @@
+.gallery-container {
+    padding: 50px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .gallery-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s;
+  }
+  
+  .gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .carouselG {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1f7f5; /* Optional: Background color during image transition */
+  }
+  .carouselG-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+  }
+  .carouselG-body-text {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1E0342;
+    font-size: 1.5rem;
+    text-align: center;
+    z-index: 1;
+    max-width: 80%;
+  }
+  
+  .carouselG-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .carouselG-item {
+    min-width: 100%;
+    height: 500px;
+  }
+  
+  .carouselG-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .carouselG-indicators {
+    position: absolute;
+    bottom: 20px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    display: flex;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .carouselG-indicator {
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    /* border-radius: 50%; */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carouselG-indicator.active {
+    background-color: #1e0342;
+  }
+    
