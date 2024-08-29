@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Navbar.jsx
 import React, { useState } from "react";
 import "./navbar.css"; // Importing CSS file for styling
@@ -79,10 +80,10 @@ const Navbar = () => {
           </li>
            */}
         </ul>
-        <div>
-        <a href="/log"><button className="navButton btn" onClick={handleChange}>Login</button></a>
-          <a href="/log"><button className="navButton-sign btn">Sign Up</button></a>
-        </div>
+        {/* <div>
+        <a href="/login"><button className="navButton btn" onClick={handleChange}>Login</button></a>
+          <a href="/login"><button className="navButton-sign btn">Sign Up</button></a>
+        </div> */}
       </div>
     </nav>
 
