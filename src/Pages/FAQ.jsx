@@ -112,7 +112,7 @@ function FAQ() {
     // Fetch FAQ data from the backend
     const fetchFAQs = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8080/api/FAQs"); // Adjust endpoint as needed
+        const response = await axios.get("https://chemistry-damp-blog-backend.onrender.com/api/FAQs"); // Adjust endpoint as needed
         // console.log(response.data);
         setFaqData(response.data);
         // console.log(faqData);
