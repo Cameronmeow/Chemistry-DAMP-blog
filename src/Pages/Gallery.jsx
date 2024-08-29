@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import './Gallery.css';
-import gal1 from '../assets/Gallery2/1.jpg';
-import gal2 from '../assets/Gallery2/2.jpg';
-import gal3 from '../assets/Gallery2/3.jpg';
-import gal4 from '../assets/Gallery2/4.jpg';
-import gal5 from '../assets/Gallery2/5.jpg';
-import gal6 from '../assets/Gallery2/6.jpg';
-import gal7 from '../assets/Gallery2/7.jpg';
-import gal8 from '../assets/Gallery2/8.jpg';
-import gal9 from '../assets/Gallery2/9.jpg';
-import gal10 from '../assets/Gallery2/10.jpg';
-import gal11 from '../assets/Gallery2/11.jpg';
-import gal12 from '../assets/Gallery2/12.jpg';
-import gal13 from '../assets/Gallery2/13.jpg';
-import gal14 from '../assets/Gallery2/14.jpg';
-import gal15 from '../assets/Gallery2/15.jpg';
-import gal16 from '../assets/Gallery2/16.jpg';
-import gal17 from '../assets/Gallery2/17.jpg';
-import gal18 from '../assets/Gallery2/18.jpg';
-import gal19 from '../assets/Gallery2/19.jpg';
+import gal1 from '../assets/Gallery/1.webp';
+import gal2 from '../assets/Gallery/2.webp';
+import gal3 from '../assets/Gallery/3.webp';
+import gal4 from '../assets/Gallery/4.webp';
+import gal5 from '../assets/Gallery/5.webp';
+import gal6 from '../assets/Gallery/6.webp';
+import gal7 from '../assets/Gallery/7.webp';
+import gal8 from '../assets/Gallery/8.webp';
+import gal9 from '../assets/Gallery/9.webp';
+import gal10 from '../assets/Gallery/10.webp';
+import gal11 from '../assets/Gallery/11.webp';
+import gal12 from '../assets/Gallery/12.webp';
+import gal13 from '../assets/Gallery/13.webp';
+import gal14 from '../assets/Gallery/14.webp';
+import gal15 from '../assets/Gallery/15.webp';
+import gal16 from '../assets/Gallery/16.webp';
+import gal17 from '../assets/Gallery/17.webp';
+import gal18 from '../assets/Gallery/18.webp';
+import gal19 from '../assets/Gallery/19.webp';
+import gal20 from '../assets/Gallery2/20.jpeg';
+import gal21 from '../assets/Gallery2/21.jpeg';
+
 
 import Navbar from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 
-const images = [gal1, gal2, gal3, gal4, gal5, gal6,gal7,gal8,gal9,gal10,gal11,gal12,gal13,gal14,gal15,gal16,gal17,gal18,gal19];
+const images = [gal1, gal2, gal3, gal4,gal20,gal21, gal5, gal6,gal7,gal8,gal9,gal10,gal11,gal12,gal13,gal14,gal15,gal16,gal17,gal18,gal19];
 
 const Gallery = ({ interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
