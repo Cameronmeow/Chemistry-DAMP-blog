@@ -57,174 +57,174 @@
 
 // // export default Home;
 
-// // -------------------------------------------------------------------------------------
-// import { useState } from "react";
-// import axios from 'axios';
-// import Navbar from "../components/navbar/navbar";
-// import Footer from "../components/footer/footer";
-// import Header from "../components/header/header";
-// import Blog from "../components/blog/blog";
-// import blogData from './blogData';
-// import SideBar from "../components/sidebar/sidebar";
-// import Announcements from "../components/Annoucements/Announcements";
-// import InfiniteScroll from "../components/Infinite/Infinite";
-// import Carousel from "../components/Carousel/Carousel";
-// import pic1 from "./pic1.jpg";
-// import pic2 from "./pic2.jpg";
-// import pic3 from "./pic3.jpg";
-// import LoginSignupForm from "../components/LoginSignUP/LoginSignupForm";
-// import "./home.css";
+// -------------------------------------------------------------------------------------
+import { useState } from "react";
+import axios from 'axios';
+import Navbar from "../components/navbar/navbar";
+import Footer from "../components/footer/footer";
+import Header from "../components/header/header";
+import Blog from "../components/blog/blog";
+import blogData from './blogData';
+import SideBar from "../components/sidebar/sidebar";
+import Announcements from "../components/Annoucements/Announcements";
+import InfiniteScroll from "../components/Infinite/Infinite";
+import Carousel from "../components/Carousel/Carousel";
+import pic1 from "./pic1.jpg";
+import pic2 from "./pic2.jpg";
+import pic3 from "./pic3.jpg";
+import LoginSignupForm from "../components/LoginSignUP/LoginSignupForm";
+import "./home.css";
 
-// function Home() {
-//   const [count, setCount] = useState(0);
+function Home() {
+  const [count, setCount] = useState(0);
 
-//   const recentUploads = [
-//     {
-//       title: "New Movie Trailer",
-//       image: `${pic1}`,
-//       description: "Check out the latest trailer for the upcoming movie!",
-//     },
-//     {
-//       title: "Blog Post on React",
-//       image: `${pic2}`,
-//       description:
-//         "Read about the latest tips and tricks in React development.",
-//     },
-//     {
-//       title: "Music Album Release",
-//       image: `${pic3}`,
-//       description:
-//         "Listen to the newly released album by your favorite artist.",
-//     },
-//   ];
+  const recentUploads = [
+    {
+      title: "New Movie Trailer",
+      image: `${pic1}`,
+      description: "Check out the latest trailer for the upcoming movie!",
+    },
+    {
+      title: "Blog Post on React",
+      image: `${pic2}`,
+      description:
+        "Read about the latest tips and tricks in React development.",
+    },
+    {
+      title: "Music Album Release",
+      image: `${pic3}`,
+      description:
+        "Listen to the newly released album by your favorite artist.",
+    },
+  ];
 
-//   const announcements = [
-//     {
-//       title: "Updated Curriculum",
-//       date: "August 5, 2024",
-//       description:
-//         "We have released new features in our application. Check them out now!",
-//     },
-//     {
-//       title: "Semex Blogs",
-//       date: "August 10, 2024",
-//       description:
-//         "Scheduled maintenance will occur from 12:00 AM to 4:00 AM. The application may be unavailable during this time.",
-//     },
-//     {
-//       title: "Community Meetup",
-//       date: "August 15, 2024",
-//       description:
-//         "Join us for a community meetup to discuss upcoming events and features.",
-//     },
-//   ];
+  const announcements = [
+    {
+      title: "Updated Curriculum",
+      date: "August 5, 2024",
+      description:
+        "We have released new features in our application. Check them out now!",
+    },
+    {
+      title: "Semex Blogs",
+      date: "August 10, 2024",
+      description:
+        "Scheduled maintenance will occur from 12:00 AM to 4:00 AM. The application may be unavailable during this time.",
+    },
+    {
+      title: "Community Meetup",
+      date: "August 15, 2024",
+      description:
+        "Join us for a community meetup to discuss upcoming events and features.",
+    },
+  ];
 
-//   const images = [pic1, pic2, pic3];
-//   return (
-//     <>
-//       <Navbar />
-//       <Carousel interval={3000} />
-//       <Header />
+  const images = [pic1, pic2, pic3];
+  return (
+    <>
+      <Navbar />
+      <Carousel interval={3000} />
+      <Header />
 
-//       {/* <LoginSignupForm/> */}
-//       <InfiniteScroll />
-//       <h1 className="appTitle">Featured Blogs</h1>
-//       <div className="appContainer">
-//         <div className="appblogs">
-//           <div className="approw">
-//           {blogData.map((blog) => (
-//               <Blog
-//                 key={blog.id}
-//                 id={blog.id}
-//                 name={blog.title}
-//                 photo={blog.photo}
-//                 description={blog.content}
+      {/* <LoginSignupForm/> */}
+      <InfiniteScroll />
+      <h1 className="appTitle">Featured Blogs</h1>
+      <div className="appContainer">
+        <div className="appblogs">
+          <div className="approw">
+          {blogData.map((blog) => (
+              <Blog
+                key={blog.id}
+                id={blog.id}
+                name={blog.title}
+                photo={blog.photo}
+                description={blog.content}
 
-//               />
-//             ))}
-//             {/* <Blog
-//               name="John Doe"
-//               photo={pic1}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic2}
-//               description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic3}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
-//             /> */}
-//           </div>
-//           {/* <div className="approw">
-//             <Blog
-//               name="John Doe"
-//               photo={pic1}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic2}
-//               description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic3}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
-//             />
-//           </div> */}
-//           {/* <div className="approw">
-//             <Blog
-//               name="John Doe"
-//               photo={pic1}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic2}
-//               description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic3}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
-//             />
-//           </div>
-//           <div className="approw"> */}
-//             {/* <Blog
-//               name="John Doe"
-//               photo={pic1}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic2}
-//               description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
-//             />
-//             <Blog
-//               name="John Doe"
-//               photo={pic3}
-//               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
-//             />
-//           </div> */}
-//         </div>
-//         <div className="side">
-//           <div className="appside">
+              />
+            ))}
+            {/* <Blog
+              name="John Doe"
+              photo={pic1}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic2}
+              description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic3}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
+            /> */}
+          </div>
+          {/* <div className="approw">
+            <Blog
+              name="John Doe"
+              photo={pic1}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic2}
+              description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic3}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
+            />
+          </div> */}
+          {/* <div className="approw">
+            <Blog
+              name="John Doe"
+              photo={pic1}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic2}
+              description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic3}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
+            />
+          </div>
+          <div className="approw"> */}
+            {/* <Blog
+              name="John Doe"
+              photo={pic1}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa. In consequat metus et tristique finibus. Pellentesque volutpat viverra ligula, "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic2}
+              description="orem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit "
+            />
+            <Blog
+              name="John Doe"
+              photo={pic3}
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae pellentesque enim. In et cursus enim, hendrerit vestibulum dolor. Vestibulum massa nibh, lacinia at massa a, pulvinar commodo massa."
+            />
+          </div> */}
+        </div>
+        <div className="side">
+          <div className="appside">
 
-//             <SideBar items={recentUploads} />
-//             <Announcements announcements={announcements} />
-//           </div>
-//         </div>
-//       </div>
+            <SideBar items={recentUploads} />
+            <Announcements announcements={announcements} />
+          </div>
+        </div>
+      </div>
 
-//       <Footer />
-//     </>
-//   );
-// }
+      <Footer />
+    </>
+  );
+}
 
-// export default Home;
+export default Home;
 // // -----------------------------------------------------------------------------------------
 // // import { useState, useEffect } from "react";
 // // import axios from "axios";
@@ -472,125 +472,128 @@
 
 // export default Home;
 
-import { useState, useEffect } from "react";
-import Navbar from "../components/navbar/navbar";
-import Footer from "../components/footer/footer";
-import Header from "../components/header/header";
-import Blog from "../components/blog/blog";
-import SideBar from "../components/sidebar/sidebar";
-import Announcements from "../components/Annoucements/Announcements";
-import InfiniteScroll from "../components/Infinite/Infinite";
-import Carousel from "../components/Carousel/Carousel";
-import pic1 from "./pic1.jpg";
-import pic2 from "./pic2.jpg";
-import pic3 from "./pic3.jpg";
-import "./home.css";
+// --------------------------------------------------------------------
 
-function Home() {
-  const [featuredBlogs, setFeaturedBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+// `import { useState, useEffect } from "react";
+// import Navbar from "../components/navbar/navbar";
+// import Footer from "../components/footer/footer";
+// import Header from "../components/header/header";
+// import Blog from "../components/blog/blog";
+// import SideBar from "../components/sidebar/sidebar";
+// import Announcements from "../components/Annoucements/Announcements";
+// import InfiniteScroll from "../components/Infinite/Infinite";
+// import Carousel from "../components/Carousel/Carousel";
+// import pic1 from "./pic1.jpg";
+// import pic2 from "./pic2.jpg";
+// import pic3 from "./pic3.jpg";
+// import "./home.css";
 
-  const recentUploads = [
-    {
-      title: "New Movie Trailer",
-      image: pic1,
-      description: "Check out the latest trailer for the upcoming movie!",
-    },
-    {
-      title: "Blog Post on React",
-      image: pic2,
-      description: "Read about the latest tips and tricks in React development.",
-    },
-    {
-      title: "Music Album Release",
-      image: pic3,
-      description:
-        "Listen to the newly released album by your favorite artist.",
-    },
-  ];
+// function Home() {
+//   const [featuredBlogs, setFeaturedBlogs] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
 
-  const announcements = [
-    {
-      title: "Updated Curriculum",
-      date: "August 5, 2024",
-      description:
-        "We have released new features in our application. Check them out now!",
-    },
-    {
-      title: "Semex Blogs",
-      date: "August 10, 2024",
-      description:
-        "Scheduled maintenance will occur from 12:00 AM to 4:00 AM. The application may be unavailable during this time.",
-    },
-    {
-      title: "Community Meetup",
-      date: "August 15, 2024",
-      description:
-        "Join us for a community meetup to discuss upcoming events and features.",
-    },
-  ];
+//   const recentUploads = [
+//     {
+//       title: "New Movie Trailer",
+//       image: pic1,
+//       description: "Check out the latest trailer for the upcoming movie!",
+//     },
+//     {
+//       title: "Blog Post on React",
+//       image: pic2,
+//       description: "Read about the latest tips and tricks in React development.",
+//     },
+//     {
+//       title: "Music Album Release",
+//       image: pic3,
+//       description:
+//         "Listen to the newly released album by your favorite artist.",
+//     },
+//   ];
 
-  useEffect(() => {
-    // Fetch the featured blogs from the backend
-    const fetchFeaturedBlogs = async () => {
-      try {
-        const response = await fetch(
-          "https://chemistry-damp-blog-backend.onrender.com/api/course-review/featured"
-        );
+//   const announcements = [
+//     {
+//       title: "Updated Curriculum",
+//       date: "August 5, 2024",
+//       description:
+//         "We have released new features in our application. Check them out now!",
+//     },
+//     {
+//       title: "Semex Blogs",
+//       date: "August 10, 2024",
+//       description:
+//         "Scheduled maintenance will occur from 12:00 AM to 4:00 AM. The application may be unavailable during this time.",
+//     },
+//     {
+//       title: "Community Meetup",
+//       date: "August 15, 2024",
+//       description:
+//         "Join us for a community meetup to discuss upcoming events and features.",
+//     },
+//   ];
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch featured blogs");
-        }
+//   useEffect(() => {
+//     // Fetch the featured blogs from the backend
+//     const fetchFeaturedBlogs = async () => {
+//       try {
+//         const response = await fetch(
+//           "https://chemistry-damp-blog-backend.onrender.com/api/course-review/featured"
+//         );
 
-        const data = await response.json();
-        setFeaturedBlogs(data);
-      } catch (err) {
-        setError(err.message);
-        console.log(err);
-      } finally {
-        setLoading(false);
-      }
-    };
+//         if (!response.ok) {
+//           throw new Error("Failed to fetch featured blogs");
+//         }
 
-    fetchFeaturedBlogs();
-  }, []);
+//         const data = await response.json();
+//         setFeaturedBlogs(data);
+//       } catch (err) {
+//         setError(err.message);
+//         console.log(err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+//     fetchFeaturedBlogs();
+//   }, []);
 
-  return (
-    <>
-      <Navbar />
-      <Carousel interval={3000} />
-      <Header />
+//   if (loading) return <div>Loading...</div>;
+//   if (error) return <div>{error}</div>;
 
-      <InfiniteScroll />
-      <h1 className="appTitle">Featured Blogs</h1>
-      <div className="appContainer">
-        <div className="appblogs">
-          <div className="approw">
-            {featuredBlogs.map((blog) => (
-              <Blog
-                key={blog._id}
-                id={blog._id}
-                name={blog.title}
-                photo={blog.photo || pic1} // Use a default image if none is provided
-                description={blog.description}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="side">
-          <div className="appside">
-            <SideBar items={recentUploads} />
-            <Announcements announcements={announcements} />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-}
+//   return (
+//     <>
+//       <Navbar />
+//       <Carousel interval={3000} />
+//       <Header />
 
-export default Home;
+//       <InfiniteScroll />
+//       <h1 className="appTitle">Featured Blogs</h1>
+//       <div className="appContainer">
+//         <div className="appblogs">
+//           <div className="approw">
+//             {featuredBlogs.map((blog) => (
+//               <Blog
+//                 key={blog._id}
+//                 id={blog._id}
+//                 name={blog.title}
+//                 photo={blog.photo || pic1} // Use a default image if none is provided
+//                 description={blog.description}
+//               />
+//             ))}
+//           </div>
+//         </div>
+//         <div className="side">
+//           <div className="appside">
+//             <SideBar items={recentUploads} />
+//             <Announcements announcements={announcements} />
+//           </div>
+//         </div>
+//       </div>
+//       <Footer />
+//     </>
+//   );
+// }
+
+// export default Home;
+`
