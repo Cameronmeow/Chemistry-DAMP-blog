@@ -94,7 +94,7 @@ const BlogDetail = () => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8080/api/course-reviews/${id}`
+          `https://chemistry-damp-blog-backend.onrender.com/api/course-reviews/${id}`
         );
         setBlog(response.data);
       } catch (error) {

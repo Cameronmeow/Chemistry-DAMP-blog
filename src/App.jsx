@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './Pages/Home';
 import Team from "./Pages/team";
 import Blogs from "./Pages/Blogs";
 import BlogDetail from "./components/BlogDetails/BlogDetail";
@@ -14,9 +14,7 @@ import LoginSignupForm from "./components/LoginSignUP/LoginSignupForm";
 import Testimonials from "./components/SemexBlogs/Testimonials";
 import Intern from "./components/Intern Blogs/intern";
 import CourseReviews from "./Admin/CourseReviews/CourseReviews";
-// import LoginSignupForm from "./components/LoginSignUP/LoginSignupForm";
 // import Testimonials from "./components/Testimonials/Testimonials";
-
 function App() {
   const [blogList] = useState(blogs);
 
@@ -40,13 +38,13 @@ function App() {
           <Route path="/misc" element={<MiscBlogs/>}/>
           <Route path="/testimonials" element={<Testimonials/>}/>
           <Route path="/intern" element={<Intern/>}/>
-          <Route path="/log" element={<LoginSignupForm/>}/>
+          {/* <Route path="/login" element={<LoginSignupForm/>}/> */}
 
-            {/* <Route path="/services" element={<Services/>} />
+          {/* <Route path="/services" element={<Services/>} />
           <Route path="/about" element={<About/>}/>  */}
-          </Routes>
-        </BrowserRouter>
-      </div>
+        </Routes>
+      </BrowserRouter>
+    </div>
     </>
   );
 }

@@ -31,7 +31,9 @@ import './bloglist.css';
 // Function to fetch course reviews using Axios
 const fetchCourseReviews = async (page, limit) => {
   try {
-    const response = await axios.get(`http://127.0.0.1:8080/api/course-reviews?page=${page}&limit=${limit}`);
+    const response = await axios.get(
+      `https://chemistry-damp-blog-backend.onrender.com/api/course-reviews?page=${page}&limit=${limit}`
+    );
     console.log(response.data);
     return response.data;
   } catch (error) {
@@ -50,7 +52,7 @@ const BlogList = () => {
   const loadMoreBlogs = useCallback(async () => {
     if (loading || !hasMore) return;
     setLoading(true);
-    const newBlogs = await fetchCourseReviews(page, 10);
+    const newBlogs = await fetchCourseReviews(page, 5);
     // Filter out blogs that are already loaded
     const uniqueBlogs = newBlogs.filter((blog) => !loadedBlogIds.has(blog._id));
     uniqueBlogs.forEach((blog) => loadedBlogIds.add(blog._id)); // Add new blog IDs to the set
