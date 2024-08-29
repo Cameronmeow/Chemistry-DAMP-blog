@@ -20,11 +20,13 @@ const Header = () => {
     <header className="banner" style={bannerStyle}>
       <div className="banner-content">
         <h1 className="banner-title">About Us</h1>
-        <p className="banner-subtitle">he IITB Economics degree was launched in 2017 and has been one of the top sought after branches among JEE rankers and this year we finally launched our own department after being a sub-department of HSS for years.
- I am sure some of us had it too at some point🙂
-Use these resources to your best and do contact us in case of any glitches or queries.
+        <p className="banner-subtitle">Welcome to the IITB Chemistry Department Portal!
 
-Disclaimer: The content of this website are opinions expressed by individual students, the information provided is for guidance purposes, use the information at your own risk.</p>
+As a dynamic and interdisciplinary field, Chemistry at IIT Bombay offers a world of opportunities. Whether you're new to the program or diving deeper into research, this portal is your go-to resource for academic materials, course reviews, and essential information.
+
+Navigating the program can be challenging, but you're not alone—many of us have had the same questions. Use these resources to your advantage, and don't hesitate to reach out if you need help.
+
+Welcome to the journey of discovery in Chemistry at IITB!</p>
       </div>
     </header>
   );

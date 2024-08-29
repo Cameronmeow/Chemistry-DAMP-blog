@@ -3,6 +3,9 @@ import blogs from "./blogData";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 import "./Blogs.css";
+import semexpic from "../assets/Blogs/semex.jpeg";
+import gradpic from "../assets/Blogs/grad.jpeg";
+import internpic from "../assets/Blogs/intern.jpg";
 import pic1 from "./pic1.jpg";
 import pic2 from "./pic2.jpg";
 import pic3 from "./pic3.jpg";
@@ -13,12 +16,13 @@ function MiscBlogs() {
     <Navbar/>
     <div className="blogContainer">
       <div className="blogColumn">
-        <a href="testimonials" style={{textDecoration:"none"}}><CurvedCard image={pic1} title="Semex Blogs" /></a>
-        
+        <a href="testimonials" style={{textDecoration:"none"}}><CurvedCard image={semexpic} title="Semex Blogs" /></a>        
       </div>
       <div className="blogColumn">
-      <a href="intern" style={{textDecoration:"none"}}><CurvedCard image={pic2} title="Intern Blogs" /></a>
-        
+      <a href="intern" style={{textDecoration:"none"}}><CurvedCard image={internpic} title="Intern Blogs" /></a>
+      </div>
+      <div className="blogColumn">
+      <a href="intern" style={{textDecoration:"none"}}><CurvedCard image={gradpic} title="Opportunities" /></a>
       </div>
     </div>
     <Footer/>
