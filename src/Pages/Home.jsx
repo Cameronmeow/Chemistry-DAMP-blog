@@ -474,7 +474,7 @@ export default Home;
 
 // --------------------------------------------------------------------
 
-// `import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import Navbar from "../components/navbar/navbar";
 // import Footer from "../components/footer/footer";
 // import Header from "../components/header/header";
