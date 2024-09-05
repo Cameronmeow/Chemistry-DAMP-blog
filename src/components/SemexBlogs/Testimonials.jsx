@@ -1,31 +1,40 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
-import pic1 from "./pic1.jpg";
-import pic2 from "./pic2.jpg";
-import pic3 from "./pic3.jpg";
-import './testimonials.css';
 
-const testimonialsData = [
-  {
-    name: 'John Doe',
-    photo: pic1,
-    experience: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et dapibus purus. Nullam et feugiat odio. Duis quis justo vel erat vehicula iaculis non vitae sapien. Proin at nisl eros. Nam aliquam semper quam, ut dignissim elit pretium sed. Proin tincidunt facilisis tortor, sed varius purus viverra ac. Integer dictum congue ligula, sed port'
-  },
-  {
-    name: 'Jane Smith',
-    photo: pic2,
-    experience: 'I’ve learned so much and made lifelong friends here. The opportunities provided were invaluable.'
-  },
-  {
-    name: 'Alex Johnson',
-    photo: pic3,
-    experience: 'This place has shaped me into a better person both academically and personally.'
-  }
-  // Add more testimonials as needed
-];
+import './testimonials.css';
+import testimonialsData from './testimonialsData.js';
+import { useNavigate } from 'react-router-dom';
+
 
 function Testimonials() {
+
+
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/semex/${id}`);
+  };
+
+
+  // State to keep track of the current review
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Function to go to the next review
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
+  };
+
+  // Function to go to the previous review
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonialsData.length - 1 : prevIndex - 1
+    );
+  };
+
+  const { id,name, photo, shortExp } = testimonialsData[currentIndex]; // Current testimonial
+
   return (
     <>
       <Navbar />
@@ -81,14 +90,29 @@ function Testimonials() {
         <br/>
         <a href="https://docs.google.com/document/d/1R6pJttoYrSlCze0jOC-vZKbrLAWBfTDH/edit?usp=sharing&ouid=114934522900264404931&rtpof=true&sd=true" >Grade Conversion Template</a>
         </p>
-        <div className="testimonials-grid">
-          {testimonialsData.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <img src={testimonial.photo} alt={`${testimonial.name}`} className="testimonial-photo" />
-              <h3 className="testimonial-name">{testimonial.name}</h3>
-              <p className="testimonial-experience">{testimonial.experience}</p>
-            </div>
-          ))}
+        {/* Navigation Buttons */}
+        <div className="testimonial-navigation">
+          <button onClick={handlePrev} className="testimonial-nav-btn">
+            &lt; {/* Left Arrow */}
+          </button>
+
+          {/* Current Review */}
+          <div 
+          className="testimonial-card"
+          onClick={() => handleClick(id)} // Add onClick to navigate on click
+          style={{ cursor: 'pointer' }} // Show cursor pointer to indicate clickable
+          >
+            <img src={photo} alt={name} className="testimonial-photo" />
+            <h3 className="testimonial-name" >{name}</h3>
+            
+            
+             <p className='testimonial-experience' >{shortExp}</p>
+           
+          </div>
+
+          <button onClick={handleNext} className="testimonial-nav-btn">
+            &gt; {/* Right Arrow */}
+          </button>
         </div>
       </div>
       <Footer />

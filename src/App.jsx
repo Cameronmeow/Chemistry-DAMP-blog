@@ -8,16 +8,21 @@ import blogs from "./Pages/blogData";
 import FAQ from "./Pages/FAQ";
 import Gallery from "./Pages/Gallery";
 import QueryForm from "./Pages/Query";
+import testimonialsData from "./components/SemexBlogs/testimonialsData";
 import MiscBlogs from "./Pages/MiscBlogs";
 import Resources from "./Pages/Resources";
+import Opportunities from "./components/Opportunities/Opportunities";
+import TestimonialDetails from "./components/SemexBlogs/TestimonialDetails";
 import LoginSignupForm from "./components/LoginSignUP/LoginSignupForm";
 import Testimonials from "./components/SemexBlogs/Testimonials";
 import Intern from "./components/Intern Blogs/intern";
 import CourseReviews from "./Admin/CourseReviews/CourseReviews";
+import PHD from "./components/Opportunities/phdChem";
+import ESHU from "./components/Opportunities/Eshu";
 // import Testimonials from "./components/Testimonials/Testimonials";
 function App() {
   const [blogList] = useState(blogs);
-
+  const [testimonialList] = useState(testimonialsData)
   return (
     <>
     {/* <h1>Hello</h1> */}
@@ -29,14 +34,18 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/faq" element={<FAQ />} /> 
+          <Route path="/opportunities" element={<Opportunities />} /> 
+          <Route path="/opportunities/phd" element={<PHD />} /> 
+          <Route path="/opportunities/eshu" element={<ESHU />} /> 
           <Route path="/courses" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/admin" element={<CourseReviews/>}/>
            <Route path="/blog/:id" element={<BlogDetail blogs={blogList} />} />
+           <Route path="/semex/:id" element={<TestimonialDetails />} />
           <Route path="/contact" element={<QueryForm/>}/>
           <Route path="/misc" element={<MiscBlogs/>}/>
-          <Route path="/testimonials" element={<Testimonials/>}/>
+          <Route path="/semex" element={<Testimonials/>}/>
           <Route path="/intern" element={<Intern/>}/>
           {/* <Route path="/login" element={<LoginSignupForm/>}/> */}
 

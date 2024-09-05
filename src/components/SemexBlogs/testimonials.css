@@ -1,36 +1,37 @@
+/* Container Styles */
 .testimonials-container {
   padding: 50px;
   background-color: #f9f9f9;
+  text-align: center;
 }
 
+/* Title and Subtitle Styles */
 .testimonials-title {
-  text-align: center;
   font-size: 2.5em;
   margin-bottom: 20px;
   color: #333;
 }
 
-.testimonials-intro, .testimonials-description {
-  text-align: center;
-  font-size: 1.2em;
-  color: #555;
-  margin-bottom: 20px;
-}
-
 .testimonials-subtitle {
-  text-align: center;
   font-size: 1.8em;
   margin-top: 40px;
   margin-bottom: 10px;
   color: #444;
 }
 
-.testimonials-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/* Intro and Description Text Styles */
+.testimonials-intro,
+.testimonials-description {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
 }
 
+.testimonials-description {
+  text-align: left;
+}
+
+/* Testimonial Card Styles */
 .testimonial-card {
   background-color: white;
   border-radius: 10px;
@@ -38,21 +39,26 @@
   padding: 20px;
   margin: 20px;
   max-width: 100%;
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction:column !important;
+  
 }
 
 .testimonial-card:hover {
   transform: translateY(-10px);
 }
 
+/* Photo Styles */
 .testimonial-photo {
-  width: 100%;
+  width: 100px !important; 
   height: auto;
-  border-radius: 50%;
+  border-radius: 20px !important;
   margin-bottom: 15px;
 }
 
+/* Text Styles within the Testimonial Card */
 .testimonial-name {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -60,7 +66,31 @@
 }
 
 .testimonial-experience {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #666;
-  font-style: italic;
+  text-align: left;
+  /* font-style: italic; */
+}
+
+/* Navigation Buttons Styles */
+.testimonial-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonial-nav-btn {
+  background-color: #0E46A3;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.testimonial-nav-btn:hover {
+  background-color: #0056b3;
 }

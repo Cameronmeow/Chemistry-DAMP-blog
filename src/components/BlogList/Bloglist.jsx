@@ -79,10 +79,12 @@ const BlogList = () => {
   }, [loadMoreBlogs]);
 
   return (
+    <div className="blog-list-container">
     <div className="blog-list">
       <h2 className="blog-list-title">All Blogs</h2>
       {blogs.map((blog) => (
         <div key={blog._id} className="blog-summary">
+        <img className="blog-photo" />
           <h3 className="blog-title">{blog.title}</h3>
           <p className="blog-excerpt">{blog.description}</p>
           <Link to={`/blog/${blog._id}`} className="read-more">Read More</Link>
@@ -90,6 +92,7 @@ const BlogList = () => {
       ))}
       {loading && <p>Loading...</p>}
       {!hasMore && <p>No more blogs to load</p>}
+    </div>
     </div>
   );
 };

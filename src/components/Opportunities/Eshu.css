@@ -1,0 +1,38 @@
+/* Container Styles */
+.eshu-container {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Title and Subtitle Styles */
+  .eshu-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .eshu-image{
+   width: 30%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  }
+  .eshu-subtitle {
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  /* Intro and Description Text Styles */
+  .eshu-intro,
+  .eshu-description {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .eshu-description {
+    text-align: left;
+  }
+  
+  

@@ -31,7 +31,8 @@ function Testimonials() {
       <Navbar />
       <div className="testimonials-container">
         <h1 className="testimonials-title">Intern Experiences</h1>
-        <div className="testimonials-grid">
+        <p className="testimonial-experience">Coming soon!</p>
+        {/* <div className="testimonials-grid">
           {testimonialsData.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
               <img src={testimonial.photo} alt={`${testimonial.name}`} className="testimonial-photo" />
@@ -39,7 +40,7 @@ function Testimonials() {
               <p className="testimonial-experience">{testimonial.experience}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>

@@ -36,7 +36,7 @@
   
   .contact-photo {
     width: 100%;
-    height: auto;
+    max-height: 90%;
     border-bottom: 1px solid #ddd;
   }
   

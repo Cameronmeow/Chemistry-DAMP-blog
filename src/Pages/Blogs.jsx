@@ -15,21 +15,21 @@ function Blogs() {
     
       <Navbar />
       <div className="blogContainer">
-        <div className="blogColumn">
+        {/* <div className="blogColumn">
           <CurvedCard image={pic1} title="Chemistry" />
           <CurvedCard image={pic2} title="HS" />
           <CurvedCard image={pic3} title="Electrical" />
         </div>
         <div className="blogColumn">
           <CurvedCard image={pic1} title="Maths" />
-          <CurvedCard image={pic2} title="IEOR" />
+          <CurvedCard image={pic2} title="IEOR" />  
           <CurvedCard image={pic3} title="GNR" />
         </div>
         <div className="blogColumn">
           <CurvedCard image={pic1} title="Physics" />
           <CurvedCard image={pic2} title="CS" />
           <CurvedCard image={pic3} title="MEMS" />
-        </div>
+        </div> */}
       </div>
       <BlogList blogs={blogList} />
       <Footer />
