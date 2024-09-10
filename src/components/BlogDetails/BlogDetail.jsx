@@ -1,77 +1,4 @@
 /* eslint-disable no-unused-vars */
-// import React from 'react';
-// import { useParams } from 'react-router-dom';
-// import './BlogDetail.css';
-// import Navbar from '../navbar/navbar';
-// import Footer from '../footer/footer';
-// import Comments from '../Comments/Comments';
-// import pic1 from "./pic1.jpg";
-// import pic2 from "./pic2.jpg";
-// import pic3 from "./pic3.jpg";
-
-// const BlogDetail = ({ blogs }) => {
-
-//   // const [comments, setComments] = useState([
-//   //   { user: 'Jane Doe', text: 'Great blog!' },
-//   //   { user: 'John Smith', text: 'Very informative, thanks!' }
-//   // ]);
-
-//   const addComment = (text) => {
-//     const newComment = { user: 'Current User', text };
-//     setComments([...comments, newComment]);
-//   };
-
-//   const { id } = useParams();
-//   const blog = blogs.find((blog) => blog.id === parseInt(id));
-//   const images = [pic1, pic2, pic3];
-//   const rand = Math.floor(Math.random() * images.length);
-//   const selectedImage = images[rand];
-//   return (
-//     <>
-//           <Navbar/>
-
-//     <div className="blog-detail">
-//       {blog ? (
-//         <>
-//         <img
-//               src={selectedImage}
-//               alt={blog.title}
-//               className="blog-detail-image"
-//             />
-//           <h2 className="blog-detail-title">{blog.title}</h2>
-//           <p className="blog-detail-content">{blog.content}</p>
-//           <h2>Course Content</h2>
-//           <p className="blog-detail-content">{blog.courseContent}</p>
-//           <h2>Difficulty</h2>
-//           <p className="blog-detail-content">{blog.difficulty}</p>
-//           <h2>Instructor</h2>
-//           <p className="blog-detail-content">{blog.Instructor}</p>
-//           <h2>Semester</h2>
-//           <p className="blog-detail-content">{blog.Semester}</p>
-//           <h2>Teaching Style</h2>
-//           <p className="blog-detail-content">{blog.TeachingStyle}</p>
-//           <h2>Time Commitment Required</h2>
-//           <p className="blog-detail-content">{blog.TimeCommitmentRequired}</p>
-//           <h2>Grading Policy and Statistics</h2>
-//           <p className="blog-detail-content">{blog.GradingPolicyStatistics}</p>
-//           <h2>Attendance Policy</h2>
-//           <p className="blog-detail-content">{blog.AttendancePolicy}</p>
-//           <h2>Evaluation Scheme</h2>
-//           <p className="blog-detail-content">{blog.EvaluationScheme}</p>
-//       <Comments />
-//         </>
-//       ) : (
-//         <p>Blog not found</p>
-//       )}
-
-//     </div>
-//     <Footer/>
-//     </>
-//   );
-// };
-
-// export default BlogDetail;
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -90,13 +17,14 @@ const BlogDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Function to fetch the blog details from the backend
+    // Fetch the course review details from the backend
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `https://chemistry-damp-blog-backend.onrender.com/api/course-reviews/${id}`
+          `https://chemistry-damp-blog-new.onrender.com/api/course/getReview/${id}`
         );
-        setBlog(response.data);
+        console.log(response.data);
+        setBlog(response.data.courseReview);
       } catch (error) {
         setError("Failed to fetch the blog");
       } finally {
@@ -105,7 +33,7 @@ const BlogDetail = () => {
     };
 
     fetchBlog();
-  }, [id]); // The effect runs when the ID changes
+  }, [id]); // Fetch again if the ID changes
 
   const images = [pic1, pic2, pic3];
   const rand = Math.floor(Math.random() * images.length);
@@ -124,31 +52,57 @@ const BlogDetail = () => {
           <>
             <img
               src={selectedImage}
-              alt={blog.title}
+              alt={blog.courseName}
               className="blog-detail-image"
             />
-            <h2 className="blog-detail-title">{blog.title}</h2>
-            <p className="blog-detail-content">{blog.description}</p>
-            <h2>Course Content</h2>
-            <p className="blog-detail-content">{blog.courseContent}</p>
-            <h2>Difficulty</h2>
-            <p className="blog-detail-content">{blog.difficulty}</p>
-            <h2>Instructor</h2>
-            <p className="blog-detail-content">{blog.instructor}</p>
-            <h2>Semester</h2>
-            <p className="blog-detail-content">{blog.semester}</p>
-            <h2>Teaching Style</h2>
-            <p className="blog-detail-content">{blog.teachingStyle}</p>
-            <h2>Time Commitment Required</h2>
-            <p className="blog-detail-content">{blog.timeCommitmentRequired}</p>
-            <h2>Grading Policy and Statistics</h2>
+            <h2 className="blog-detail-title">{blog.courseName}</h2>
             <p className="blog-detail-content">
-              {blog.gradingPolicyStatistics}
+              <strong>Course Code: </strong>
+              {blog.courseCode}
             </p>
-            <h2>Attendance Policy</h2>
+            <p className="blog-detail-content">
+              <strong>Semester & Year: </strong>
+              {blog.semesterAndYearOfCompletion}
+            </p>
+            <p className="blog-detail-content">
+              <strong>Credits: </strong>
+              {blog.numberOfCredits}
+            </p>
+            <h3>Instructor</h3>
+            <p className="blog-detail-content">{blog.courseInstructor}</p>
+
+            <h3>Course Overview</h3>
+            <p className="blog-detail-content">{blog.courseOverview}</p>
+
+            <h3>Course Material Difficulty</h3>
+            <p className="blog-detail-content">
+              {blog.courseMaterialDifficultyRating}/10
+            </p>
+
+            <h3>Exam & Grading Difficulty</h3>
+            <p className="blog-detail-content">
+              {blog.examDifficultyGradingDifficulty}/10
+            </p>
+
+            <h3>Attendance Policy</h3>
             <p className="blog-detail-content">{blog.attendancePolicy}</p>
-            <h2>Evaluation Scheme</h2>
-            <p className="blog-detail-content">{blog.evaluationScheme}</p>
+
+            <h3>Teaching Mode</h3>
+            <p className="blog-detail-content">{blog.modeOfTeaching}</p>
+
+            <h3>Exam Experience</h3>
+            <p className="blog-detail-content">{blog.examExperience}</p>
+
+            <h3>Assignments or Projects</h3>
+            <p className="blog-detail-content">{blog.assignmentOrProjects}</p>
+
+            <h3>Tips for Future Chemists</h3>
+            <p className="blog-detail-content">{blog.tipsForFutureChemists}</p>
+
+            <h3>Additional Resources</h3>
+            <p className="blog-detail-content">{blog.resources}</p>
+
+            {/* Comments Component */}
             <Comments blogId={id} />
           </>
         ) : (
