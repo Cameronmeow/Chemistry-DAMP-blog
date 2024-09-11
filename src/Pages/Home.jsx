@@ -100,7 +100,7 @@ function Home() {
                 key={blog._id}
                 id={blog._id}
                 name={blog.courseName}
-                photo={blog.photo}
+                photo={blog.photoUrl}
                 description={blog.courseOverview}
                 className="blog-card"
               >

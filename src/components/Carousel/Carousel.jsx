@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Carousel.css';
-import pic1 from "../../assets/Main Page Corousel/1.jpg"
-import pic2 from "../../assets/Main Page Corousel/2.jpg"
-import pic3 from "../../assets/Main Page Corousel/3.jpg"
-import pic4 from "../../assets/Main Page Corousel/4.jpg"
-import pic5 from "../../assets/Main Page Corousel/5.jpg"
+import pic1 from "/assets/Main Page Corousel/1.jpg"
+import pic2 from "/assets/Main Page Corousel/2.jpg"
+import pic3 from "/assets/Main Page Corousel/3.jpg"
+import pic4 from "/assets/Main Page Corousel/4.jpg"
+import pic5 from "/assets/Main Page Corousel/5.jpg"
 const images = [pic1, pic2,pic3,pic4,pic5];
 
 const Carousel = ({ interval = 3000 }) => {
