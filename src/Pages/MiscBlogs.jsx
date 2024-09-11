@@ -22,7 +22,7 @@ function MiscBlogs() {
         <div className="blogColumn">
           <a href="opportunities" style={{ textDecoration: "none" }}>
             <CurvedCard
-              image="/assets/Blogs/internpic.jpeg"
+              image="/assets/Blogs/intern.jpeg"
               title="Opportunities"
             />
           </a>
