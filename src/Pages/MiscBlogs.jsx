@@ -16,7 +16,7 @@ function MiscBlogs() {
         </div>
         <div className="blogColumn">
           <a href="intern" style={{ textDecoration: "none" }}>
-            <CurvedCard image="/assets/Blogs/intern.jpeg" title="Intern Blogs" />
+            <CurvedCard image="/assets/Blogs/intern.jpg" title="Intern Blogs" />
           </a>
         </div>
         <div className="blogColumn">
