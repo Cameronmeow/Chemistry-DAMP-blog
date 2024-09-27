@@ -65,11 +65,6 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="/contact" className="navbar-link">
-              Queries
-            </a>
-          </li>
-          <li className="navbar-item">
             <a href="/team" className="navbar-link">
               Team
             </a>

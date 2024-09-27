@@ -1,44 +1,203 @@
-.appContainer{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 20px;
+.appContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
 }
-.appblogs{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.appblogs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.appTitle{
-    margin: 20px;
+.appTitle {
+  padding-left: 40px;
+  text-align: left;
+  color: white;
+  /* background-color: rgb(66, 66, 66,0.7); */
+  letter-spacing: 0.2em;
 }
-.approw{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    bottom: 10px;
+.approw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  bottom: 10px;
 }
-.appside{
-    
-    top: 20px; 
-    
-    /* display: flex;
+.appside {
+  top: 20px;
+
+  /* display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row; */
-    position: sticky;
-
+  position: sticky;
 }
-.side{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+.cardA-section {
+  padding: 50px;
+  text-align: center;
+  
+}
+
+.cardA-title {
+  font-size: 2.5em;
+  opacity: 0;
+  background-color: rgb(66, 66, 66,0.7);
+  margin: 30px 0px 20px 0px;
+  
+  color: #F5F5F5;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cardA-row {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* ContactCard.css */
+.cardA-section{
+  color: white;
+}
+.cardA-inner {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* This gives the 3D effect */
+  margin: 10px;
+  padding: 0;
+}
+
+/* Flip animation */
+.cardA-inner:hover .cardA-front {
+  transform: rotateY(180deg);
+}
+
+.cardA-inner:hover .cardA-back {
+  transform: rotateY(0deg);
+  --clr: #229799;
+  background: var(--clr);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+
+/* Front and back of the card */
+.cardA-front, .cardA-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden; /* Hides the backface when not visible */
+  transition: transform 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Front card styling */
+.cardA-front {
+  background-color: #F5F5F5;
+  transform: rotateY(0deg);
+}
+
+.cardA-front h3 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.cardA-front p {
+  font-size: 1.0em;
+  color: #666;
+}
+
+/* Back card styling */
+.cardA-back {
+  background-color: #229799;
+  color: white;
+  transform: rotateY(180deg);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardA-back .cardA-bio {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  
+}
+
+.cardA-button {
+  background-color: #fff;
+  color: #229799;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  letter-spacing: normal;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cardA-button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Ensuring the card flips properly */
+.cardA-inner {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cardA-front, .cardA-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.cardA-back {
+  transform: rotateY(180deg);
+}
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 @media (max-width: 768px) {
-    .approw{
-      flex-direction: column;
-    }
+  .approw {
+    flex-direction: column;
   }
+  .appContainer{
+    flex-direction: column;
+  }
+  .appside {
+    position: static; /* Remove sticky positioning on mobile */
+    display: block;   /* Ensure items come in one line */
+    flex-direction: column; /* Make items appear in one row */
+    justify-content: space-between; /* Space between items for better appearance */
+  }
+
+  /* Ensure that items inside the sidebar and announcements adjust as well */
+  .side {
+    width: 100%; /* Adjust side container to take up full width */
+   
+  }
+
+  .appside > * {
+    width: 100%; /* Make each child component (SideBar and Announcements) take full width */
+    margin-bottom: 20px; /* Add spacing between them */
+  }
+
+}

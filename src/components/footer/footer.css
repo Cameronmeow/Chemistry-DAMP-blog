@@ -3,7 +3,8 @@
   height: 90%;
   padding: 0;
   margin-top: 30px;
-  background-color: #0E46A3;
+  background-color: rgba(12, 242, 246, 0.2);
+  backdrop-filter: blur(20px);
   color: white;
 }
 .footerContainer{
@@ -15,13 +16,24 @@
   align-items: center;
   
 }
-
+.footerButton{
+  width: 100%;
+  color: black;
+  background-color: #E1F7F5;
+}
+.footerButton:hover{
+  color: black;
+  background-color: #9AC8CD;
+}
 .footerItems > li > a {
   color: #E1F7F5;
-  color: rgb(23, 5, 80);
+  /* color: rgb(23, 5, 80); */
+  color: #E1F7F5;
+
 }
 .footerItems > li > a:hover {
-  color: #E1F7F5;
+  /* color: #E1F7F5; */
+  color: rgb(23, 5, 80);
 
 }
 .footer-section{
@@ -32,4 +44,74 @@
   color: white;
  
   width: 100%;
+}
+.footer {
+  
+  padding: 40px 20px; /* Spacing */
+  text-align: center; /* Center-align text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px; /* Adjust as needed */
+}
+
+.footer-info {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #E1F7F5; /* Dark text */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer-button {
+  background-color: #48CFCB; /* Blue button */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  color: black;
+  background-color: #E1F7F5; /* Darker blue on hover */
+}
+
+.footer-issues {
+  margin-top: 20px;
+}
+
+.footer-email-button {
+  background-color: #F5F5F5; /* Green button */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-email-button:hover {
+  background-color: #48CFCB; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap:10px;
+  }
 }

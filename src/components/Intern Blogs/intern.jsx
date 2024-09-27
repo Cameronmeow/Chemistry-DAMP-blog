@@ -6,7 +6,7 @@ import pic2 from "./pic2.jpg";
 import pic3 from "./pic3.jpg";
 import './intern.css';
 
-const testimonialsData = [
+const internData = [
   {
     name: 'John Doe',
     photo: pic1, // Replace with actual image path
@@ -22,22 +22,22 @@ const testimonialsData = [
     photo: pic3, // Replace with actual image path
     experience: 'This place has shaped me into a better person both academically and personally.'
   }
-  // Add more testimonials as needed
+  // Add more intern as needed
 ];
 
 function Testimonials() {
   return (
     <>
       <Navbar />
-      <div className="testimonials-container">
-        <h1 className="testimonials-title">Intern Experiences</h1>
-        <p className="testimonial-experience">Coming soon!</p>
-        {/* <div className="testimonials-grid">
-          {testimonialsData.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <img src={testimonial.photo} alt={`${testimonial.name}`} className="testimonial-photo" />
-              <h3 className="testimonial-name">{testimonial.name}</h3>
-              <p className="testimonial-experience">{testimonial.experience}</p>
+      <div className="intern-container">
+        <h1 className="intern-title">Intern Experiences</h1>
+        <p className="intern-experience">Coming soon!</p>
+        {/* <div className="intern-grid">
+          {internData.map((intern, index) => (
+            <div key={index} className="intern-card">
+              <img src={intern.photo} alt={`${intern.name}`} className="intern-photo" />
+              <h3 className="intern-name">{intern.name}</h3>
+              <p className="intern-experience">{intern.experience}</p>
             </div>
           ))}
         </div> */}

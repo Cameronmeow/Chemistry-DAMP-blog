@@ -107,7 +107,7 @@ const contactsData = [
     name: 'Akshat Yadav',
     photo: Akshat,
     bio: 'Hey, I’m Akshat! My time as the CG for Mood Indigo last year was hands down the best experience of my life. When I’m not on the volleyball court or playing online games, I’m delving into finance—because, let’s face it, games won’t pay my bills:(',
-    instagram: 'Hey, I’m Akshat! My time as the CG for Mood Indigo last year was hands down the best experience of my life. When I’m not on the volleyball court or playing online games, I’m delving into finance—because, let’s face it, games won’t pay my bills:(',
+    instagram: '_aksh_t',
     linkedin: 'https://www.linkedin.com/in/akshat-yadav-9b2758223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     email: 'akshaty71@gmail.com',
     role: 'Mentor'  

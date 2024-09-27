@@ -89,4 +89,8 @@
     animation-delay: 0.3s;
   }
   /* Add more as needed */
-  
+  @media (max-width: 768px) {
+    .announcements-box {
+      margin-right: 0px;
+    }
+  }

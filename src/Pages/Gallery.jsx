@@ -59,13 +59,14 @@ const Gallery = ({ interval = 3000 }) => {
   return (
     <>
       <Navbar />
-
+    
+      <div className='gallery'>
       {/* Carousel Section */}
       <div className="carouselG">
         <div className="carouselG-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
             <div className="carouselG-item" key={index}>
-              <img src={image} alt={`Slide ${index}`} loading="lazy" />
+              <img src={image} alt={`Slide ${index}`} loading="lazy"/>
             </div>
           ))}
         </div>
@@ -91,9 +92,9 @@ const Gallery = ({ interval = 3000 }) => {
           ))}
         </div>
       </div>
-
+    </div>
       <Footer />
-    </>
+      </>
   );
 };
 

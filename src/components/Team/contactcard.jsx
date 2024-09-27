@@ -13,13 +13,15 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const ContactCard = ({ name, photo, bio, instagram,linkedin,email }) => {
   return (
+    
+    <div className='contact-container'>
     <div className="contact-card">
       <div className="contact-card-front">
         <img src={photo} alt={name} className="contact-photo" />
-        <h3 className="contact-name">{name}</h3>
       </div>
       <div className="contact-card-back">
-        <p className="contact-bio">{bio}</p>
+        
+      <p className="contact-bio">{bio}</p>
         <div>
         
         {instagram && <a href={instagram} className="contact-instagram" target="_blank" rel="noopener noreferrer">
@@ -32,6 +34,9 @@ const ContactCard = ({ name, photo, bio, instagram,linkedin,email }) => {
         </div>
       </div>
     </div>
+        <h3 className="contact-name">{name}</h3>
+        </div>
+      
   );
 };
 
