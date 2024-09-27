@@ -96,7 +96,7 @@ const BlogList = () => {
           </div>
         ))}
         {loading && <p>Loading...</p>}
-        {!hasMore && <p>No more blogs to load</p>}
+        {/* {!hasMore && <p>No more blogs to load</p>} */}
       </div>
     </div>
   );
