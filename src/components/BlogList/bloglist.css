@@ -3,19 +3,16 @@
 /* Container for the blog list */
 .blog-list-container{
   max-width: 100vw;
-  padding: 20px;
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .blog-list {
-  padding: 40px 20px; /* Increased padding for more spacing */
-  max-width: 1000px; /*Constrain the width for better readability */
-  margin: 0 auto; /*Center the container*/
-  background-color: #f8f9fa; /* Light background color */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  max-width: 1200px; /* Adjust the width as needed */
+ /* Increased padding for more spacing */
+  max-width: fit-content; /*Constrain the width for better readability */
+  margin: 0 auto; /*Center the container*//* Soft shadow */
+   /* Adjust the width as needed */
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
   gap: 20px;
@@ -26,11 +23,13 @@
 .blog-list-title {
   grid-column: span 4; /* Make the title span all 4 columns */
   
-  font-size: 2.5rem; /* Larger font size */
+  font-size: 3.5rem; /* Larger font size */
   font-weight: bold; /* Bold text */
   margin-bottom: 30px; /* More space below title */
-  color: #333; /* Darker color for contrast */
-  text-align: center; /* Center align the title */
+  color: white; /* Darker color for contrast */
+  text-align: left;
+   /* Center align the title */
+   letter-spacing: 0.1em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
 }
 
@@ -40,15 +39,25 @@
   padding: 20px; /* Increased padding for more space inside */
   border: none; /* Removed border for a cleaner look */
   border-radius: 12px; /* Increased border-radius for a more rounded look */
-  background-color: #ffffff; /* White background for card contrast */
-  box-shadow: 0 4px 12px #1e04e166; /* Larger shadow for depth */
+  --clr: #229799;
+  /* White background for card contrast */
+  background-color: rgb(245, 245, 245,0.2);
+  box-shadow: 0 0 35px var(--clr);/* Larger shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 300px;
+  color: white;
+  width: 300px;
 }
 
 /* Hover effect for the blog summary */
 .blog-summary:hover {
   transform: translateY(-5px); /* Slight lift effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+  background-color: rgb(66, 66, 66);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+ /* Increased shadow on hover */
 }
 .blog-photo{
   width: 100%;
@@ -58,8 +67,7 @@
 /* Title of each blog post */
 .blog-title {
   font-size: 1.8rem; /* Larger title font size */
-  margin: 0;
-  color: #333; /* Darker color for better readability */
+  margin: 0; /* Darker color for better readability */
 }
 
 /* Excerpt of each blog post */
@@ -75,10 +83,10 @@
   display: inline-block; /* Display as a block for better click area */
   margin-top: 15px; /* Space above link */
   padding: 10px 15px; /* Padding for button-like appearance */
-  background-color: #1e04e1; /* Blue background */
-  color: #fff; /* White text */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold text */
+  background-color: #48CFCB; /* Blue background */
+  color: black; /* White text */
+  text-decoration: none; /* Remove underline */ /* Bold text */
+  text-align: center;
   border-radius: 5px; /* Rounded corners */
   transition: background-color 0.3s ease; /* Smooth transition */
 }
@@ -87,4 +95,16 @@
 .read-more:hover {
   background-color: #5f49ff; /* Darker blue on hover */
 
+}
+
+@media (max-width: 768px) {
+  .blog-list {
+     grid-template-columns: repeat(1, 1fr); /* 4 columns */
+     gap: 20px;
+   
+   }
+   .blog-list-title {
+    grid-column: span 1; /* Make the title span all 4 columns */
+    
+  }
 }

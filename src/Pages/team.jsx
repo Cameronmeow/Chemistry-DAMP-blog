@@ -51,7 +51,7 @@ function Team() {
       <div className="contactdiv">
         <h1 className="contact-heading">Meet Our Team</h1>
         <h2 className="contact-subheading">
-          DAMP Coordinators {year}-{year % 100 + 1}
+          DAMP Coordinator {year}-{year % 100 + 1}
         </h2>
 
         {/* Display the Coordinator */}

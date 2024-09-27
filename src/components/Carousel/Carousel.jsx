@@ -18,12 +18,22 @@ const Carousel = ({ interval = 3000 }) => {
     return () => clearInterval(timer); // Cleanup interval on component unmount
   }, [interval]);
 
+
+
+
   return (
     <div className="carousel">
       {/* <div className="carousel-text">About Us</div> */}
-      <div className="carousel-content">
-      <div className='carousel-title'>Chemistry DAMP Blogs</div>
-      <p className="carousel-subtitle">- By Chemistry Family</p>
+      <div className="carousel-overlay">
+        <Navbar />
+        <div className="carousel-content">
+          <div className="carousel-title">Chemistry DAMP Blogs</div>
+          <p className="carousel-subtitle">- By Chemistry Family</p>
+          <a href="" className="carousel-button"  >
+            <span>Learn More</span>
+          </a>
+        </div>
+        <div></div>
       </div>
       {/* <div className="carousel-body-text">The IITB Economics degree was launched in 2017 and has been one of the top sought after branches among JEE rankers and this year we finally launched our own department after being a sub-department of HSS for years.
  I am sure some of us had it too at some point🙂
@@ -33,7 +43,9 @@ Disclaimer: The content of this website are opinions expressed by individual stu
       <div className="carousel-inner">
         {images.map((image, index) => (
           <div
-            className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
+            className={`carousel-item ${
+              index === currentIndex ? "active" : ""
+            }`}
             key={index}
           >
             <img src={image} alt={`Slide ${index}`} />
@@ -45,7 +57,7 @@ Disclaimer: The content of this website are opinions expressed by individual stu
           <span
             key={index}
             className={`carousel-indicator ${
-              index === currentIndex ? 'active' : ''
+              index === currentIndex ? "active" : ""
             }`}
             onClick={() => setCurrentIndex(index)}
           ></span>

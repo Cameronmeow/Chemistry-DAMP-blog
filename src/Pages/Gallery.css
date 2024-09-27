@@ -1,13 +1,13 @@
 .gallery-container {
     padding: 50px;
-    background-color: #f7f7f7;
+
     text-align: center;
   }
   
   .gallery-title {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
     animation: fadeInDown 1s ease-out;
   }
   
@@ -65,23 +65,28 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin: 30px auto;
-    max-width: 1000px; /* Adjust width as needed */
+    margin: 20px auto;
     
+    max-width: 1000px; /* Adjust width as needed */
   }
-  
+  .gallery{
+    z-index:-4;
+  }
   .carouselG-inner {
     display: flex;
+
     transition: transform 0.5s ease-in-out;
   }
   
   .carouselG-item {
     min-width: 100%;
+ 
     transition: transform 0.5s ease;
   }
   
   .carouselG-item img {
     width: 100%;
+   
     display: block;
     border-radius: 10px; /* Rounded corners for images */
   }

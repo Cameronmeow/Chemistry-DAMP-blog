@@ -2,7 +2,7 @@ import React from 'react';
 import './header.css'; // Import your CSS file for styling
 import bg from "./bg3.jpg";
 
-const Header = () => {
+const Header = (ref) => {
     const bannerStyle = {
         backgroundImage: `url(${bg})`, // Replace with your image path
         backgroundSize: 'cover',

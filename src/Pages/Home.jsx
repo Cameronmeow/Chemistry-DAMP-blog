@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
@@ -9,11 +9,16 @@ import SideBar from "../components/sidebar/sidebar";
 import Announcements from "../components/Annoucements/Announcements";
 import InfiniteScroll from "../components/Infinite/Infinite";
 import Carousel from "../components/Carousel/Carousel";
+import { useInView } from "react-intersection-observer";
 import pic1 from "./pic1.jpg";
 import pic2 from "./pic2.jpg";
 import pic3 from "./pic3.jpg";
 import LoginSignupForm from "../components/LoginSignUP/LoginSignupForm";
+import {Link,animateScroll as scroll} from 'react-scroll';
+
 import "./home.css";
+
+
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -82,16 +87,67 @@ function Home() {
     },
   ];
 
+  const { ref: cardRef, inView: cardInView } = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.1, // Adjust the threshold to trigger animation
+  });
+
   const images = [pic1, pic2, pic3];
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Carousel interval={3000} />
-      <Header />
-
-      {/* <LoginSignupForm/> */}
-      <InfiniteScroll />
-      <h1 className="appTitle">Featured Blogs</h1>
+        <h2 className={`cardA-title ${cardInView ? "animate-heading" : ""}`}>
+            explore our features.
+        </h2>
+      <div className="cardA-section" ref={cardRef}>
+        <div className="cardA-row">
+          <div className="cardA-inner">
+            <div className="cardA-front">
+              <h3>Course Reviews</h3>
+              <p>
+                The Course Reviews section provides detailed student insights
+                and experiences, helping others understand course content,
+                difficulty, and expectations.
+              </p>
+            </div>
+            <div className="cardA-back">
+              <h3 className="cardA-bio">For More Info</h3>
+              <a className="cardA-button" style={{textDecoration:"none"}} href="/courses">Go to Course Reviews</a>
+            </div>
+          </div>
+          <div className="cardA-inner">
+            <div className="cardA-front">
+            <h3>Blogs</h3>
+            <p>
+              The Blogs section features SemEx experiences, internship insights,
+              and opportunities within the chemistry department, offering
+              valuable guidance and stories
+            </p>
+            </div>
+            <div className="cardA-back">
+              <h3 className="cardA-bio">For More Info</h3>
+              <a className="cardA-button" style={{textDecoration:"none"}} href="/misc">Go to Blogs</a>
+            </div>
+          </div>
+          <div className="cardA-inner">
+            <div className="cardA-front">
+            <h3>Resources</h3>
+            <p>
+              The Resources section offers organized links to semester-wise
+              materials, internships, and more, providing easy access to
+              essential academic resources
+            </p>
+            </div>
+            <div className="cardA-back">
+              <h3 className="cardA-bio">For More Info</h3>
+              <a className="cardA-button" style={{textDecoration:"none"}} href="/resources">Go to Resources</a>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+      <h1 className="appTitle">featured blogs</h1>
       <div className="appContainer">
         <div className="appblogs">
           <div className="approw">
@@ -116,7 +172,7 @@ function Home() {
         <div className="side">
           <div className="appside">
             <SideBar items={recentUploads} />
-            <Announcements announcements={announcements} />
+            {/* <Announcements announcements={announcements} /> */}
           </div>
         </div>
       </div>

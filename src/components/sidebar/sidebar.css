@@ -92,3 +92,9 @@
   }
   /* Add more as needed */
   
+
+  @media (max-width: 768px) {
+    .navigation-box {
+      margin-right: 0px;
+    }
+  }

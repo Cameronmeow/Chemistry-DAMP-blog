@@ -56,54 +56,54 @@ const BlogDetail = () => {
               className="blog-detail-image"
             />
             <h2 className="blog-detail-title">{blog.courseName}</h2>
+              <h3 className="blog-detail-subheading">Course Code: </h3>
             <p className="blog-detail-content">
-              <strong>Course Code: </strong>
               {blog.courseCode}
             </p>
+              <h3 className="blog-detail-subheading">Semester & Year: </h3>
             <p className="blog-detail-content">
-              <strong>Semester & Year: </strong>
               {blog.semesterAndYearOfCompletion}
             </p>
+              <h3 className="blog-detail-subheading">Credits: </h3>
             <p className="blog-detail-content">
-              <strong>Credits: </strong>
               {blog.numberOfCredits}
             </p>
-            <h3>Instructor</h3>
+            <h3 className="blog-detail-subheading">Instructor</h3>
             <p className="blog-detail-content">{blog.courseInstructor}</p>
 
-            <h3>Course Overview</h3>
+            <h3 className="blog-detail-subheading">Course Overview</h3>
             <p className="blog-detail-content">{blog.courseOverview}</p>
 
-            <h3>Course Material Difficulty</h3>
+            <h3 className="blog-detail-subheading">Course Material Difficulty</h3>
             <p className="blog-detail-content">
               {blog.courseMaterialDifficultyRating}/10
             </p>
 
-            <h3>Exam & Grading Difficulty</h3>
+            <h3 className="blog-detail-subheading">Exam & Grading Difficulty</h3>
             <p className="blog-detail-content">
               {blog.examDifficultyGradingDifficulty}/10
             </p>
 
-            <h3>Attendance Policy</h3>
+            <h3 className="blog-detail-subheading">Attendance Policy</h3>
             <p className="blog-detail-content">{blog.attendancePolicy}</p>
 
-            <h3>Teaching Mode</h3>
+            <h3 className="blog-detail-subheading">Teaching Mode</h3>
             <p className="blog-detail-content">{blog.modeOfTeaching}</p>
 
-            <h3>Exam Experience</h3>
+            <h3 className="blog-detail-subheading">Exam Experience</h3>
             <p className="blog-detail-content">{blog.examExperience}</p>
 
-            <h3>Assignments or Projects</h3>
+            <h3 className="blog-detail-subheading">Assignments or Projects</h3>
             <p className="blog-detail-content">{blog.assignmentOrProjects}</p>
 
-            <h3>Tips for Future Chemists</h3>
+            <h3 className="blog-detail-subheading">Tips for Future Chemists</h3>
             <p className="blog-detail-content">{blog.tipsForFutureChemists}</p>
 
-            <h3>Additional Resources</h3>
+            <h3 className="blog-detail-subheading">Additional Resources</h3>
             <p className="blog-detail-content">{blog.resources}</p>
 
             {/* Comments Component */}
-            <Comments blogId={id} />
+            {/* <Comments blogId={id} /> */}
           </>
         ) : (
           <p>Blog not found</p>

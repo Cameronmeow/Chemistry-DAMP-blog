@@ -12,9 +12,11 @@
     flex-wrap: wrap;
 }
 .contact-heading {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333;
+    font-size: 3rem;
+    margin: 30px;
+    color: white;
+    font-style:bold;
+    letter-spacing: 0.2em;
     text-align: center;
     position: relative;
     animation: fadeInDown 1s ease forwards;
@@ -22,7 +24,7 @@
   .contact-subheading {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #666;
+    color: #f5f5f5;
     text-align: center;
     position: relative;
     animation: fadeInDown 1s ease forwards;
