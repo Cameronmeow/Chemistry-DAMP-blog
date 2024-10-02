@@ -3,11 +3,11 @@
 .opportunity-container {
   padding: 40px 20px;
   max-width: 1200px;
-  
-  margin: 0 auto;
-  background-color: #f8f9fa;
+  z-index: 0;
+  margin: 3% auto;
+  /* background-color: #f8f9fa; */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #333;
+  color: white;
 }
 
 .opportunity-grid {
@@ -40,10 +40,18 @@
   width: 90%;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  --clr: #229799;
+  /* White background for card contrast */
+  background-color: rgb(66, 66, 66, 0.4);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 35px var(--clr); /* Larger shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .opportunity-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: rgb(66, 66, 66);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -58,11 +66,18 @@
 .opportunity-name {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: white;
 }
 
 .opportunity-experience {
   font-size: 1rem;
-  color: #555;
+  color: #48cfcb;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .opportunity-card {
+    background-color: rgb(66, 66, 66);
+    backdrop-filter: blur(0px);
+  }
 }

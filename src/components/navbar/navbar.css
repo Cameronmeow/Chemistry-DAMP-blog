@@ -25,7 +25,6 @@ body {
 }
 .navbarB {
   background-color: rgba(12, 242, 246, 0.2);
-  backdrop-filter: blur(20px);
   padding: 0.5rem;
   margin-bottom: 0px;
   z-index: 999999999;

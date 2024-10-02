@@ -1,19 +1,22 @@
 /* Container Styles */
 .phd-container {
     padding: 50px;
-    background-color: #f9f9f9;
+    margin: 3% auto;
+    background-color: rgb(34, 151, 153,0.3);
     text-align: center;
+    width: 60vw;
+    border-radius: 20px;
   }
   
   /* Title and Subtitle Styles */
   .phd-title {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: wheat;
   }
   .phd-image{
-    height: 80%; /* Make the image responsive */
-  width: auto;
+    height: auto; /* Make the image responsive */
+  width: 100%;
   border-radius: 8px;
   margin-bottom: 20px;
   }
@@ -21,19 +24,27 @@
     font-size: 1.8em;
     margin-top: 40px;
     margin-bottom: 10px;
-    color: #444;
+    color: wheat;
   }
   
   /* Intro and Description Text Styles */
   .phd-intro,
   .phd-description {
     font-size: 1.2em;
-    color: #555;
+    color: whitesmoke;
     margin-bottom: 20px;
   }
   
   .phd-description {
     text-align: left;
+  }
+  @media (max-width: 768px) {
+    .phd-container {
+     
+      width: 100vw;
+      
+    }
+    
   }
   
   

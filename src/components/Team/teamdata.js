@@ -1,11 +1,12 @@
 // contactsData.js
 
+
 import photo1 from '/assets/Team/DampC.jpeg'; // Replace with actual paths
 import Suketu from '/assets/Team/Suketu.png'; // Replace with actual paths
 import Rutuja from '/assets/Team/Rutuja.jpeg'; // Replace with actual paths
 import Pushpendra from '/assets/Team/Pushpendra.jpeg'; // Replace with actual paths
 import Jinisha from '/assets/Team/Jinisha.jpg'; // Replace with actual paths
-import Jasmine from '/assets/Team/Jasmine.jpg'; // Replace with actual paths
+import Jasmine from '/assets/Team/Jasmine.jpeg'; // Replace with actual paths
 import Harsh from '/assets/Team/Harsh.png'; // Replace with actual paths
 import Ayush from '/assets/Team/Ayush.jpeg'; // Replace with actual paths
 import Kimya from '/assets/Team/Kimya.jpeg'; // Replace with actual paths

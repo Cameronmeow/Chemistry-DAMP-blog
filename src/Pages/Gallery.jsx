@@ -55,11 +55,9 @@ const Gallery = ({ interval = 3000 }) => {
     const preloadImage = new Image();
     preloadImage.src = images[(currentIndex + 1) % images.length];
   }, [currentIndex]);
-
   return (
     <>
       <Navbar />
-    
       <div className='gallery'>
       {/* Carousel Section */}
       <div className="carouselG">
@@ -85,6 +83,7 @@ const Gallery = ({ interval = 3000 }) => {
       <div className="gallery-container">
         <h1 className="gallery-title">Our Gallery</h1>
         <div className="gallery-grid">
+     
           {images.map((image, index) => (
             <div key={index} className="gallery-item">
               <img src={image} alt={`Gallery ${index}`} className="gallery-image" loading="lazy" />

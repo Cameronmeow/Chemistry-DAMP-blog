@@ -1,50 +1,41 @@
 import React from 'react';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
-import pic1 from "./pic1.jpg";
-import pic2 from "./pic2.jpg";
-import pic3 from "./pic3.jpg";
+import internData from './internData'; // Import data from internData.js
 import './intern.css';
+import { useNavigate } from 'react-router-dom';
 
-const internData = [
-  {
-    name: 'John Doe',
-    photo: pic1, // Replace with actual image path
-    experience: 'My journey at the institute has been amazing. The faculty and peers have been incredibly supportive.'
-  },
-  {
-    name: 'Jane Smith',
-    photo: pic2, // Replace with actual image path
-    experience: 'I’ve learned so much and made lifelong friends here. The opportunities provided were invaluable.'
-  },
-  {
-    name: 'Alex Johnson',
-    photo: pic3, // Replace with actual image path
-    experience: 'This place has shaped me into a better person both academically and personally.'
-  }
-  // Add more intern as needed
-];
+function Intern() {
+  const navigate = useNavigate();
 
-function Testimonials() {
+  // Handle navigation based on the unique id of each intern
+  const handleClick = (id) => {
+    navigate(`/intern/${id}`);
+  };
+
   return (
     <>
       <Navbar />
       <div className="intern-container">
-        <h1 className="intern-title">Intern Experiences</h1>
-        <p className="intern-experience">Coming soon!</p>
-        {/* <div className="intern-grid">
+        <h1 className="intern-title">Intern Blogs</h1>
+        <div className="intern-grid">
           {internData.map((intern, index) => (
-            <div key={index} className="intern-card">
+            <div
+              key={index}
+              className="intern-card"
+              onClick={() => handleClick(intern.id)} // Navigate using id
+              style={{ cursor: 'pointer' }}
+            >
               <img src={intern.photo} alt={`${intern.name}`} className="intern-photo" />
               <h3 className="intern-name">{intern.name}</h3>
               <p className="intern-experience">{intern.experience}</p>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
       <Footer />
     </>
   );
 }
 
-export default Testimonials;
+export default Intern;

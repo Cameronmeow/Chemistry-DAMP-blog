@@ -30,6 +30,7 @@ function Footer() {
         <a className="footer-button" href= "/courses" style= {{textDecoration:"none"}}>Course Reviews</a>
         <a className="footer-button" href= "/resources" style= {{textDecoration:"none"}}>Resources</a>
         <a className="footer-button" href= "/misc" style= {{textDecoration:"none"}}>Blogs</a>
+        <a className="footer-button" href= "/tracks" style= {{textDecoration:"none"}}>Course Tracks</a>
       </div>
 
       {/* Issues Section */}

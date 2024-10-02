@@ -1,0 +1,127 @@
+/* General Container Styling */
+.dropdown-tables-container {
+  margin: 20px;
+  /* display: flex;/ */
+}
+.dropdown-tables-heading{
+  text-align: center;
+  color: white;
+  margin-bottom:  40px;
+  font-size: 3.5rem;
+  letter-spacing: 0.15em;
+}
+/* Section Container for Each Dropdown */
+.dropdown-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Button Styling */
+.dropdown-btn {
+  position: relative;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+  width: 500px;
+  text-align: center;
+  border-radius: 20px;
+  
+
+}
+
+.dropdown-btn:hover {
+  --clr: #229799;
+  background: var(--clr);
+  color: var(--clr);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+
+.dropdown-btn:before{
+  content: '';
+  position: absolute;
+  inset:2px;
+  border-radius: 20px;
+  background: #EEEEEE;
+}
+
+.dropdown-btn span{
+  position: relative;
+  z-index : 1;
+
+}
+/* Table Container Styling with Animation */
+.dropdown-table {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+.dropdown-table.open {
+  max-height: 100%; /* Adjust based on table content */
+  opacity: 1;
+
+}
+
+/* Table Styling */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 2px solid #dddddd;
+  text-align: center;
+}
+tr{
+  width: 200px;
+}
+th {
+  background-color: #f2f2f25e;
+  backdrop-filter: blur(20px);
+  font-weight: bold;
+  width: 200px;
+}
+
+tbody tr:nth-child(odd) {
+  /* background-color: #f9f9f9; */
+  background-color: rgb(66, 66, 66);
+  color: white;
+  /* backdrop-filter: blur(20px); */
+  /* font-weight: bold; */
+}
+
+tbody tr:nth-child(even) {
+  /* background-color: #f1f1f1; */
+  background-color: rgb(34, 151, 153,0.3);
+  color: white;
+  /* backdrop-filter: blur(20px); */
+}
+@media (max-width: 768px) {
+  .dropdown-table.open {
+    max-height: 100%; /* Adjust based on table content */
+  }
+  table {
+    width: 80%;
+  }
+  
+  th, td {
+    padding: 2px 2px;
+  }
+  .dropdown-btn{
+    width: 400px;
+  }
+}
