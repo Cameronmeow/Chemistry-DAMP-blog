@@ -31,7 +31,7 @@
 }
 
 .carousel-title {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -143,3 +143,11 @@
 .carousel-indicator.active {
   background-color: #1e0342;
 }
+/* @media (max-width: 768px) {
+  .carousel-text  {
+  font-size: 1rem;
+    
+    
+  }
+  
+} */

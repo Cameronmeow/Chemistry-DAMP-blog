@@ -19,6 +19,10 @@ import Intern from "./components/Intern Blogs/intern";
 import CourseReviews from "./Admin/CourseReviews/CourseReviews";
 import PHD from "./components/Opportunities/phdChem";
 import ESHU from "./components/Opportunities/Eshu";
+import CourseTracks from "./Pages/CourseTracks";
+import Vaibhavi from "./components/Intern Blogs/Vaibhavi/Vaibhavi";
+import Priyaank from "./components/Intern Blogs/Priyaank/Priyaank";
+import Shounak from "./components/Intern Blogs/Shounak/Shounak";
 // import Testimonials from "./components/Testimonials/Testimonials";
 function App() {
   const [blogList] = useState(blogs);
@@ -34,6 +38,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/faq" element={<FAQ />} /> 
+          <Route path="/tracks" element={<CourseTracks />} /> 
           <Route path="/opportunities" element={<Opportunities />} /> 
           <Route path="/opportunities/phd" element={<PHD />} /> 
           <Route path="/opportunities/eshu" element={<ESHU />} /> 
@@ -47,6 +52,9 @@ function App() {
           <Route path="/misc" element={<MiscBlogs/>}/>
           <Route path="/semex" element={<Testimonials/>}/>
           <Route path="/intern" element={<Intern/>}/>
+          <Route path="/intern/1" element={<Priyaank/>}/>
+          <Route path="/intern/2" element={<Shounak/>}/>
+          <Route path="/intern/3" element={<Vaibhavi/>}/>
           {/* <Route path="/login" element={<LoginSignupForm/>}/> */}
 
           {/* <Route path="/services" element={<Services/>} />

@@ -1,5 +1,5 @@
 /* Container Styles */
-.eshu-container {
+.shounak-container {
   padding: 50px;
   margin: 3% auto;
   background-color: rgb(34, 151, 153,0.3);
@@ -9,18 +9,18 @@
   }
   
   /* Title and Subtitle Styles */
-  .eshu-title {
+  .shounak-title {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: wheat;
   }
-  .eshu-image{
+  .shounak-image{
     height: auto; /* Make the image responsive */
     width: 40%;
     border-radius: 8px;
     margin-bottom: 20px;
   }
-  .eshu-subtitle {
+  .shounak-subtitle {
     font-size: 1.8em;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -28,19 +28,19 @@
   }
   
   /* Intro and Description Text Styles */
-  .eshu-intro,
-  .eshu-description {
+  .shounak-intro,
+  .shounak-description {
     font-size: 1.2em;
     color: whitesmoke;
     margin-bottom: 20px;
   }
   
-  .eshu-description {
+  .shounak-description {
     text-align: left;
   }
   
   @media (max-width: 768px) {
-    .eshu-container {
+    .shounak-container {
      
       width: 100vw;
       

@@ -55,13 +55,18 @@ const Navbar = () => {
             </a>
           </li>
           <li className="navbar-item">
-            <a href="/faq" className="navbar-link">
-              FAQS
+            <a href="/misc" className="navbar-link">
+              Blogs
             </a>
           </li>
           <li className="navbar-item">
-            <a href="/misc" className="navbar-link">
-              Blogs
+            <a href="/tracks" className="navbar-link">
+              Course Tracks
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a href="/faq" className="navbar-link">
+              FAQS
             </a>
           </li>
           <li className="navbar-item">

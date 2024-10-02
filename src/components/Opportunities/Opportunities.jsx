@@ -20,12 +20,6 @@ const opportunityData = [
     experience: 'Eshu Koli',
     link: '/opportunities/eshu'
   },
-  {
-    name: 'Alex Johnson',
-    photo: pic1, // Replace with actual image path
-    experience: 'This place has shaped me into a better person both academically and personally.',
-    link: '/opportunities/alex-johnson'
-  }
   // Add more opportunities as needed
 ];
 
