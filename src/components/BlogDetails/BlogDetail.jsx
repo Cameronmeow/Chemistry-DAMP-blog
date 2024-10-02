@@ -51,7 +51,7 @@ const BlogDetail = () => {
         ) : blog ? (
           <>
             <img
-              src={selectedImage}
+              src={blog.photoUrl}
               alt={blog.courseName}
               className="blog-detail-image"
             />
