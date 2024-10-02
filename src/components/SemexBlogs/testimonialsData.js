@@ -1,5 +1,5 @@
 import pic1 from "./pic1.jpg";
-import Ajinkya from "../../assets/Semex/Ajinkya.jpeg"
+import Ajinkya from "/assets/Semex/Ajinkya.jpeg";
 import pic2 from "./pic2.jpg";
 import pic3 from "./pic3.jpg";
 
