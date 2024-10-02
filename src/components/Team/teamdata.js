@@ -6,7 +6,7 @@ import Suketu from '/assets/Team/Suketu.png';
 import Rutuja from '/assets/Team/Rutuja.jpeg'; 
 import Pushpendra from '/assets/Team/Pushpendra.jpeg'; 
 import Jinisha from '/assets/Team/Jinisha.jpg'; 
-import Jasmine from '/assets/Team/Jasmine.jpg'; 
+import Jasmine from '/assets/Team/Jasmine.jpeg'; 
 import Harsh from '/assets/Team/Harsh.png'; 
 import Ayush from '/assets/Team/Ayush.jpeg'; 
 import Kimya from '/assets/Team/Kimya.jpeg'; 
