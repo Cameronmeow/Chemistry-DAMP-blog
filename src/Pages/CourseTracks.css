@@ -61,7 +61,7 @@
 .dropdown-table {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.6s ease;
+  transition: opacity 0.6s ease;
   opacity: 0;
   margin-top: 10px;
 }

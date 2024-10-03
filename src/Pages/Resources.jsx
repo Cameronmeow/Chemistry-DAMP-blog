@@ -14,8 +14,6 @@ const resources = [
   { id: 8, title: 'Semester 7 Resources', link: 'https://drive.google.com/drive/folders/1pufyoo4zCJqiZbeKfA--CwPYmL1JeaBa?usp=drive_link' },
   { id: 9, title: 'Semester 8 Resources', link: 'https://drive.google.com/drive/folders/16pashYRz6gr-V1do3bYHY2Im0ryIAM12?usp=drive_link' },
   { id: 10, title: 'Electives 2020-21', link: 'https://drive.google.com/drive/folders/1ahCb_6jBOTAyHyr9a7TnphOzkuTHGRbY?usp=drive_link' },
-  { id: 11, title: 'Projects', link: '/resources/projects' },
-  { id: 12, title: 'Career Guidance', link: '/resources/careers' },
 ];
 
 const Resources = () => {

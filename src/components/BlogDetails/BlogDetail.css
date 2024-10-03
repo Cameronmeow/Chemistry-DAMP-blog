@@ -39,3 +39,15 @@
   border-radius: 8px;
   margin-bottom: 20px; /* Space below image */
 }
+@media(max-width:768px){
+  .blog-detail{
+    width: 95vw;
+    padding: 15px;
+  }
+  .blog-detail-content{
+    font-size: 1rem;
+  }
+  .blog-detail-title{
+    font-size: 2.5rem;
+  }
+}
