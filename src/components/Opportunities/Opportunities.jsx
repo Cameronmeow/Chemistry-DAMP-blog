@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
-import pic1 from "./pic1.jpg";
-import eshu1 from "./eshu1.jpeg";
-import phd from "./phd.jpg";
+import eshu1 from "./Eshu/eshu1.jpeg"
+import phd from "./PHD/phd.jpg";
+import Sanaa from "./Sanaa/Sanaa2.png"
 import './Opportunities.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,6 +19,12 @@ const opportunityData = [
     photo: eshu1, // Replace with actual image path
     experience: 'Eshu Koli',
     link: '/opportunities/eshu'
+  },
+  {
+    name: 'IDDDP, Internships, and More: A Journey of Growth',
+    photo: Sanaa, // Replace with actual image path
+    experience: 'Sanaa Sharma',
+    link: '/opportunities/sanaa'
   },
   // Add more opportunities as needed
 ];

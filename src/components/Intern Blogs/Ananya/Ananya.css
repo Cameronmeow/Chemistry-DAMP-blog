@@ -1,0 +1,51 @@
+/* Container Styles */
+.ananya-container {
+  padding: 50px;
+  margin: 3% auto;
+  background-color: rgb(34, 151, 153,0.3);
+  text-align: center;
+  width: 60vw;
+  border-radius: 20px;
+  }
+  
+  /* Title and Subtitle Styles */
+  .ananya-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: wheat;
+  }
+  .ananya-image{
+    height: auto; /* Make the image responsive */
+    width: 40%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .ananya-subtitle {
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: wheat;
+  }
+  
+  /* Intro and Description Text Styles */
+  .ananya-intro,
+  .ananya-description {
+    font-size: 1.2em;
+    color: whitesmoke;
+    margin-bottom: 20px;
+  }
+  
+  .ananya-description {
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .ananya-container {
+     
+      width: 100vw;
+      padding:15px ;
+    }
+    
+  }
+  
+  

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../navbar/navbar";
-import Footer from "../footer/footer";
+import Navbar from "../../navbar/navbar";
+import Footer from "../../footer/footer";
 import "./Eshu.css";
 import bg from "./eshu2.jpeg";
 function ESHU() {

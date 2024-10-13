@@ -17,12 +17,14 @@ import LoginSignupForm from "./components/LoginSignUP/LoginSignupForm";
 import Testimonials from "./components/SemexBlogs/Testimonials";
 import Intern from "./components/Intern Blogs/intern";
 import CourseReviews from "./Admin/CourseReviews/CourseReviews";
-import PHD from "./components/Opportunities/phdChem";
-import ESHU from "./components/Opportunities/Eshu";
+import PHD from "./components/Opportunities/PHD/phdChem";
+import ESHU from "./components/Opportunities/Eshu/Eshu";
+import SANAA from "./components/Opportunities/Sanaa/Sanaa";
 import CourseTracks from "./Pages/CourseTracks";
 import Vaibhavi from "./components/Intern Blogs/Vaibhavi/Vaibhavi";
 import Priyaank from "./components/Intern Blogs/Priyaank/Priyaank";
 import Shounak from "./components/Intern Blogs/Shounak/Shounak";
+import Ananya from "./components/Intern Blogs/Ananya/Ananya" 
 // import Testimonials from "./components/Testimonials/Testimonials";
 function App() {
   const [blogList] = useState(blogs);
@@ -42,6 +44,7 @@ function App() {
           <Route path="/opportunities" element={<Opportunities />} /> 
           <Route path="/opportunities/phd" element={<PHD />} /> 
           <Route path="/opportunities/eshu" element={<ESHU />} /> 
+          <Route path="/opportunities/sanaa" element={<SANAA />} /> 
           <Route path="/courses" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/resources" element={<Resources />} />
@@ -55,6 +58,7 @@ function App() {
           <Route path="/intern/1" element={<Priyaank/>}/>
           <Route path="/intern/2" element={<Shounak/>}/>
           <Route path="/intern/3" element={<Vaibhavi/>}/>
+          <Route path="/intern/4" element={<Ananya/>}/>
           {/* <Route path="/login" element={<LoginSignupForm/>}/> */}
 
           {/* <Route path="/services" element={<Services/>} />

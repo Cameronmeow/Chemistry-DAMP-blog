@@ -1,5 +1,5 @@
 import "./footer.css";
-import logo from "./logo_basic.svg";
+import logo from "./logo_blueblack.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faHeart } from "@fortawesome/free-regular-svg-icons";
