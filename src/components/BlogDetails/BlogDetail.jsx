@@ -100,7 +100,7 @@ const BlogDetail = () => {
             <p className="blog-detail-content">{blog.tipsForFutureChemists}</p>
 
             <h3 className="blog-detail-subheading">Additional Resources</h3>
-            <p className="blog-detail-content">{blog.resources}</p>
+            <p className="blog-detail-content"><a href={blog.resources} style={{textDecoration:"none", fontSize:"1.3rem"}}>Link</a></p>
 
             {/* Comments Component */}
             {/* <Comments blogId={id} /> */}

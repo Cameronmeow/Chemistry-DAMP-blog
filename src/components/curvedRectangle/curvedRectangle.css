@@ -1,5 +1,5 @@
 .curved-card {
-    width: 300px;
+    width: 400px;
     padding: 20px;
     border-radius: 20px;
     background-color: #f0f0f0;
@@ -9,16 +9,28 @@
     margin: 20px auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+    color: #333;
+    /* border: 1px solid #ddd; */
+    /* overflow: hidden; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 0px 8px #9AC8CD; */
   }
   
   .curved-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-14px);
+    --clr: #2297994a;
+    background: var(--clr);
+    color: white;
+    border: none;
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px #229799;
   }
   
   .curved-card-image-container {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px;
@@ -31,8 +43,19 @@
   }
   
   .curved-card-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 10px;
+    font-size: 2.0rem;
+    margin: 20px;
   }
-  
+  @media (max-width: 768px) {
+    .curved-card{
+      width: 300px;
+      padding:10px ;
+    }
+    .curved-card-title{
+      font-size: 1.2rem;
+    }
+    .curved-card-image-container{
+      width: 70px;
+      height: 70px;
+    }
+  }

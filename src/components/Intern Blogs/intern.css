@@ -58,8 +58,8 @@
 }
 
 .intern-photo {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
@@ -75,4 +75,10 @@
   font-size: 1rem;
   color: #48CFCB;
   line-height: 1.6;
+}
+@media(max-width: 768px){
+  .intern-photo{
+    width: 125px;
+    height: 125px;
+  }
 }

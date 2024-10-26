@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../navbar/navbar";
-import Footer from "../footer/footer";
+import Navbar from "../../navbar/navbar";
+import Footer from "../../footer/footer";
 import "./phdChem.css";
 import bg from "./phd.jpg";
 function PHD() {
