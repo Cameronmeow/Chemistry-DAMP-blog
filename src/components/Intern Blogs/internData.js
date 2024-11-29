@@ -7,7 +7,7 @@ import Ananya from "./Ananya/Ananya.jpeg"
 const internData = [
   {
     id: 1,
-    experience: 'Internship Experience: Drip Capital',
+    experience: 'Internship Experience: True Beacon',
     photo: Priyaank,
     name: 'Priyaank Sheth',
   },
