@@ -70,7 +70,7 @@ function FAQ() {
           These are the most commonly asked questions about Chemistry DAMP blog.
           <br />
           Can't find what you are looking for? Contact us{" "}
-          <a href="/contact">here</a>.
+          <a href="/contact" style={{color:"navy"}}>here</a>.
         </h3>
         <div className="faq-buttons">
           <button onClick={() => (window.location.href = "/blogs")}>
