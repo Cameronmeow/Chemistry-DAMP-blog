@@ -60,7 +60,7 @@ const Gallery = ({ interval = 3000 }) => {
       <Navbar />
       <div className='gallery'>
       {/* Carousel Section */}
-      <div className="carouselG">
+      {/* <div className="carouselG">
         <div className="carouselG-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {images.map((image, index) => (
             <div className="carouselG-item" key={index}>
@@ -77,7 +77,7 @@ const Gallery = ({ interval = 3000 }) => {
             ></span>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Gallery Section */}
       <div className="gallery-container">
