@@ -90,7 +90,7 @@ function FAQ() {
           {faqData.map((faq, index) => (
             <div key={faq._id} className="faq-item">
               <div className="faq-question" onClick={() => handleToggle(index)}>
-                <FontAwesomeIcon icon={faQuestion} />
+                {/* <FontAwesomeIcon icon={faQuestion} /> */}
                 {faq.question}
                 <span
                   className={`arrow ${
