@@ -5,8 +5,8 @@ import Footer from '../components/footer/footer';
 
 const resources = [
   { id: 1, title: 'Resources', link: 'https://drive.google.com/drive/u/1/folders/1aMSDmSByLFckzIVRcm-pwtoReCvSLWaj' },
-  { id: 2, title: 'Semester 1 Resources', link: 'https://drive.google.com/drive/u/1/folders/0B_vNHDTaTyFcdzlVakFhWGlDSnM?resourcekey=0-HmNqwFqnqDaUrqZB3kPCgw' },
-  { id: 3, title: 'Semester 2 Resources', link: 'https://drive.google.com/drive/folders/0B_vNHDTaTyFcSFRSN0lsN3dZR0k?resourcekey=0-YmHX9ix9CEtAt4NLAu5riA&usp=drive_link' },
+  // { id: 2, title: 'Semester 1 Resources', link: 'https://drive.google.com/drive/u/1/folders/0B_vNHDTaTyFcdzlVakFhWGlDSnM?resourcekey=0-HmNqwFqnqDaUrqZB3kPCgw' },
+  // { id: 3, title: 'Semester 2 Resources', link: 'https://drive.google.com/drive/folders/0B_vNHDTaTyFcSFRSN0lsN3dZR0k?resourcekey=0-YmHX9ix9CEtAt4NLAu5riA&usp=drive_link' },
   { id: 4, title: 'Semester 3 Resources', link: 'https://drive.google.com/drive/folders/1ncpYr2ngd_lAz0BrY27Evwt_OWEsuvl_?usp=drive_link' },
   { id: 5, title: 'Semester 4 Resources', link: 'https://drive.google.com/drive/folders/1nKrwRRJ9yxE2t0Zt9UoYZk6czCEci9pl?usp=drive_link' },
   { id: 6, title: 'Semester 5 Resources', link: 'https://drive.google.com/drive/folders/19_uLrvQGz57Uthzj0w8zQEyH9AajOGwL?usp=drive_link' },
