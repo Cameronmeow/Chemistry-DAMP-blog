@@ -9,7 +9,7 @@ const trackData = [
         ['1', 'CH105', 'Organic and Inorganic Chemistry', 'CH521, CH578, CH806, CH815,CH820'],
         ['3', 'CH202', 'Transition Metal Chemistry', 'CH405, CH547'],
         ['5', 'CH301', 'Coordination Chemistry and Magnetic Properties', 'CH410, CH521, CH824'],
-        ['6', 'CH3YY2', 'Chemistry of Main Group Elements', 'CH438, CH547'],
+        ['6', 'CH302', 'Chemistry of Main Group Elements', 'CH438, CH547'],
       ],
     },
     {
@@ -20,7 +20,7 @@ const trackData = [
         ['1', 'CH105', 'Organic and Inorganic Chemistry', 'CH401, CH404, CH805, CH839'],
         ['3', 'CH209', 'Basic Organic Chemistry', 'CH401, CH406, CH588, CH845'],
         ['5', 'CH305', 'Chemistry of Functional Groups', 'CH410, CH521, CH824'],
-        ['6', 'CH3XX2', 'Chemistry of Biomolecules', 'CH584, CH540, CH819'],
+        ['6', 'CH304', 'Chemistry of Biomolecules', 'CH584, CH540, CH819'],
       ],
     },
     {
@@ -32,7 +32,7 @@ const trackData = [
           ['4', 'CH227', 'Thermo-dynamics and Chemical Kinetics', 'CH408, Biothermo-dynamics'],
           ['5', 'CH309', 'Introduction to Electro-chemistry', 'CH403'],
           ['6', 'CH311', 'Solid State Chemistry', 'CH552, CH518'],
-          ['6', 'CH3ZZ', 'Group Theory and Spectro-scopy', 'Advanced Molecular Spectroscopy, Biophysical Chemistry'],
+          ['6', 'CH306', 'Group Theory and Spectro-scopy', 'Advanced Molecular Spectroscopy, Biophysical Chemistry'],
         ],
       },
       {
